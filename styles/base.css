@@ -1,0 +1,160 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  /* font-weight: normal; */
+  vertical-align: baseline;
+  background: transparent;
+}
+
+aside,
+figure,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+/* $inner-content-margin: calc(100% / $koeff); */
+body {
+  font-family: Ubuntu, sans-serif;
+}
+
+body .main-content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
+  /* align-items: stretch; */
+}
+
+body .main-content .webim-install {
+  background: #eff4f4;
+  height: 23.2vw;
+  min-height: 242px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+body .main-content .webim-install__header {
+  margin-top: 40px;
+  margin-left: 19.1vw;
+  padding-left: 10px;
+  /* margin-top: 40px; */
+  color: #393e6b;
+  font-size: 2.25em;
+  text-transform: uppercase;
+}
+
+body .main-content .webim-install__desc {
+  /* margin-top: 2.4%; */
+  margin-left: 19.1vw;
+  margin-bottom: 10px;
+  padding: 0 10px 10px 10px;
+  /* padding-top: 0; */
+  width: 39vw;
+  min-width: 540px;
+  color: #74757b;
+}
+
+body .main-content .webim-install .button-wrapper {
+  /* margin-top: 2.7%; */
+  margin-left: 19.1vw;
+  margin-bottom: 28px;
+  /* margin-bottom: 3.1%; */
+  /* width: 39vw; */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+body .main-content .webim-install .button-wrapper .button {
+  min-width: 256px;
+  height: 48px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 16px 20px;
+}
+
+body .main-content .webim-install .button-wrapper .button--try-free {
+  color: #fff;
+  background-color: #2cd3b8;
+  /* margin: 16px 10px; */
+  margin: 0 10px;
+}
+
+body .main-content .webim-install .button-wrapper .button--rate {
+  color: #393e6b;
+  border: 1px solid #393e6b;
+  /* margin: 16px 10px; */
+  margin: 0 10px;
+}
+
+body .main-content .easy-install {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: flex-start; */
+}
+
+/* nav, h1, h2 {
+  color: #393e6b;
+} */
+a {
+  color: #0da088;
+  font-size: 1.5em;
+}
+
+/* button {
+  width: 256px;
+  height: 48px;
+  border-radius: 24px;
+  border-width: 0;
+  color: #fff;
+  background-color: #2cd3b8;
+  text-transform: uppercase;
+} */
+li::before {
+  content: "•";
+  color: #3b4269;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* .main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+} */
+/* section {
+  /* width: 60%; */
+/* width: calc(100vw - 2*328px);
+} */
+/* screen width: 100vw */

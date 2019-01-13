@@ -1,0 +1,108 @@
+@import 'reset','variables', 'mixins';
+@import url("https://fonts.googleapis.com/css?family=#{$family}&amp;subset=cyrillic");
+
+body {
+  font-family: #{$family}, sans-serif;
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: stretch; */
+    /* align-items: stretch; */
+    .webim-install {
+      background: $section-bckg-color;
+      height: 23.2vw;
+      min-height: 242px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      &__header {
+        margin-top: 40px;
+        @include header-style;
+      }
+      &__desc {
+        /* margin-top: 2.4%; */
+        margin-left: $inner-content-margin;
+        margin-bottom: 10px;
+        padding: 0 10px 10px 10px;
+        /* padding-top: 0; */
+        width: 39vw;
+        min-width: 540px;
+        color: $text-color;
+      }
+      .button-wrapper {
+        /* margin-top: 2.7%; */
+        margin-left: $inner-content-margin;
+        margin-bottom: 28px;
+        /* margin-bottom: 3.1%; */
+        /* width: 39vw; */
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .button {
+          min-width: 256px;
+          height: 48px;
+          border-radius: 24px;
+          text-transform: uppercase;
+          font-size: 0.9em;
+          padding: 16px 20px;
+        }
+        .button--try-free {
+          color: #fff;
+          background-color: $button-green-color;
+          /* margin: 16px 10px; */
+          margin: 0 10px;
+        }
+        .button--rate {
+          color: $header-color;
+          border: 1px solid $header-color;
+          /* margin: 16px 10px; */
+          margin: 0 10px;
+        }
+      }
+    }
+    .easy-install {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      /* align-items: flex-start; */
+    }
+  }
+}
+
+/* nav, h1, h2 {
+  color: #393e6b;
+} */
+
+a {
+  color: #0da088;
+  font-size: 1.5em;
+}
+/* button {
+  width: 256px;
+  height: 48px;
+  border-radius: 24px;
+  border-width: 0;
+  color: #fff;
+  background-color: #2cd3b8;
+  text-transform: uppercase;
+} */
+
+li::before {
+  content: "•"; color: #3b4269;
+  display: inline-block; width: 1em;
+  margin-left: -1em;
+}
+
+/* .main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+} */
+
+/* section {
+  /* width: 60%; */
+  /* width: calc(100vw - 2*328px);
+} */
+
+/* screen width: 100vw */
