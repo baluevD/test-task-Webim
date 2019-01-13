@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic");
 * {
   padding: 0;
@@ -35,7 +34,7 @@ img {
   max-width: 100%;
 }
 
-nav ul {
+ul {
   list-style: none;
 }
 
@@ -47,21 +46,19 @@ body {
 body .main-content {
   display: flex;
   flex-direction: column;
-  /* justify-content: stretch; */
-  /* align-items: stretch; */
 }
 
 body .main-content .webim-install {
-  background: #eff4f4;
   height: 23.2vw;
   min-height: 242px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  background: #eff4f4;
+  /* justify-content: space-evenly; */
 }
 
 body .main-content .webim-install__header {
-  margin-top: 40px;
+  margin-top: 4.7vw;
   margin-left: 19.1vw;
   padding-left: 10px;
   /* margin-top: 40px; */
@@ -71,28 +68,28 @@ body .main-content .webim-install__header {
 }
 
 body .main-content .webim-install__desc {
-  /* margin-top: 2.4%; */
+  margin-top: 2.4vw;
   margin-left: 19.1vw;
-  margin-bottom: 10px;
   padding: 0 10px 10px 10px;
-  /* padding-top: 0; */
   width: 39vw;
   min-width: 540px;
+  /* line-height: 1.5; */
   color: #74757b;
 }
 
 body .main-content .webim-install .button-wrapper {
-  /* margin-top: 2.7%; */
   margin-left: 19.1vw;
-  margin-bottom: 28px;
-  /* margin-bottom: 3.1%; */
-  /* width: 39vw; */
+  margin-top: 3.6vw;
+  margin-bottom: 4vw;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-body .main-content .webim-install .button-wrapper .button {
+body .main-content .webim-install .button-wrapper .button--try-free {
+  margin: 0 10px;
+  color: #fff;
+  background-color: #2cd3b8;
   min-width: 256px;
   height: 48px;
   border-radius: 24px;
@@ -101,35 +98,183 @@ body .main-content .webim-install .button-wrapper .button {
   padding: 16px 20px;
 }
 
-body .main-content .webim-install .button-wrapper .button--try-free {
-  color: #fff;
-  background-color: #2cd3b8;
-  /* margin: 16px 10px; */
-  margin: 0 10px;
-}
-
 body .main-content .webim-install .button-wrapper .button--rate {
+  margin: 0 10px;
   color: #393e6b;
   border: 1px solid #393e6b;
-  /* margin: 16px 10px; */
-  margin: 0 10px;
+  min-width: 256px;
+  height: 48px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 16px 20px;
 }
 
 body .main-content .easy-install {
+  height: 27.56vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  /* align-items: flex-start; */
+  /* justify-content: space-evenly; */
+  /* img {
+          width: 50px;
+          height: 50px;
+        } */
+  /* } */
+  /* &__steps-wrapper {
+        display: flex;
+      } */
+}
+
+body .main-content .easy-install__header {
+  margin-top: 4.3vw;
+  margin-left: 19.1vw;
+  padding-left: 10px;
+  /* margin-top: 40px; */
+  color: #393e6b;
+  font-size: 2.25em;
+  text-transform: uppercase;
+}
+
+body .main-content .easy-install__desc {
+  margin-top: 1.6vw;
+  margin-left: 19.1vw;
+  padding: 0 10px 10px 10px;
+  width: 39vw;
+  min-width: 540px;
+  /* line-height: 1.5; */
+  color: #74757b;
+}
+
+body .main-content .easy-install__steps-wrapper {
+  margin-top: 1.9vw;
+  margin-bottom: 5.2vw;
+  margin-left: 19.1vw;
+  display: flex;
+  justify-content: flex-start;
+}
+
+body .main-content .easy-install__steps-wrapper .registration {
+  margin-right: 8.1vw;
+  padding-left: 10px;
+  width: 118px;
+}
+
+body .main-content .easy-install__steps-wrapper .registration__small-reference {
+  margin-top: 41px;
+}
+
+body .main-content .easy-install__steps-wrapper .registration__small-reference--registration {
+  /* margin-top: 41px; */
+  font-size: 1.125em;
+  text-decoration: none;
+  border-bottom: 2px solid #0da088;
+}
+
+body .main-content .easy-install__steps-wrapper .registration:before {
+  content: "1";
+  display: block;
+  margin-bottom: -83px;
+  margin-left: -43px;
+  font-weight: bold;
+  font-size: 8em;
+  color: #e9e9ed;
+}
+
+body .main-content .easy-install__steps-wrapper .html-setup {
+  padding-left: 10px;
+  width: 194px;
+}
+
+body .main-content .easy-install__steps-wrapper .html-setup__small-reference {
+  margin-top: 41px;
+}
+
+body .main-content .easy-install__steps-wrapper .html-setup__small-reference--setup {
+  font-size: 1.125em;
+  text-decoration: none;
+  border-bottom: 2px solid #0da088;
+}
+
+body .main-content .easy-install__steps-wrapper .html-setup:before {
+  content: "2";
+  display: block;
+  margin-bottom: -83px;
+  margin-left: -43px;
+  font-weight: bold;
+  font-size: 8em;
+  color: #e9e9ed;
+}
+
+body .main-content .dashboard-install {
+  background: #eff4f4;
+  height: 46.25vw;
+  display: flex;
+  flex-direction: column;
+}
+
+body .main-content .dashboard-install__header {
+  margin-top: 4.7vw;
+  margin-left: 19.1vw;
+  padding-left: 10px;
+  /* margin-top: 40px; */
+  color: #393e6b;
+  font-size: 2.25em;
+  text-transform: uppercase;
+}
+
+body .main-content .html-install {
+  background: #eff4f4;
+  height: 46.25vw;
+  display: flex;
+  flex-direction: column;
+}
+
+body .main-content .html-install__header {
+  margin-top: 5vw;
+  margin-left: 19.1vw;
+  padding-left: 10px;
+  /* margin-top: 40px; */
+  color: #393e6b;
+  font-size: 2.25em;
+  text-transform: uppercase;
+}
+
+body .main-content .html-install .install-list {
+  /* margin-top: 4.4vw; */
+  margin-left: calc(19.1vw + 26px);
+  margin-bottom: 5.1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30.1vw;
+}
+
+body .main-content .html-install .install-list__item__reference {
+  color: #0da088;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-bottom: 2px solid #0da088;
+}
+
+body .main-content .html-install .install-list__item__desc {
+  margin-top: 1vw;
+  margin-left: 27px;
+  color: #74757b;
+}
+
+body .main-content .html-install .install-list__item::before {
+  content: "\A";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3b4269;
+  display: inline-block;
+  margin: 3px 30px 3px -15px;
 }
 
 /* nav, h1, h2 {
   color: #393e6b;
 } */
-a {
-  color: #0da088;
-  font-size: 1.5em;
-}
-
 /* button {
   width: 256px;
   height: 48px;
@@ -139,14 +284,6 @@ a {
   background-color: #2cd3b8;
   text-transform: uppercase;
 } */
-li::before {
-  content: "•";
-  color: #3b4269;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
 /* .main-content{
   display: flex;
   flex-direction: column;

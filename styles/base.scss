@@ -6,66 +6,155 @@ body {
   .main-content {
     display: flex;
     flex-direction: column;
-    /* justify-content: stretch; */
-    /* align-items: stretch; */
     .webim-install {
-      background: $section-bckg-color;
       height: 23.2vw;
       min-height: 242px;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      background: $section-bckg-color;
+      /* justify-content: space-evenly; */
       &__header {
-        margin-top: 40px;
+        margin-top: 4.7vw;
         @include header-style;
       }
       &__desc {
-        /* margin-top: 2.4%; */
-        margin-left: $inner-content-margin;
-        margin-bottom: 10px;
-        padding: 0 10px 10px 10px;
-        /* padding-top: 0; */
-        width: 39vw;
-        min-width: 540px;
-        color: $text-color;
+        margin-top: 2.4vw;
+        @include text-style;
       }
       .button-wrapper {
-        /* margin-top: 2.7%; */
         margin-left: $inner-content-margin;
-        margin-bottom: 28px;
-        /* margin-bottom: 3.1%; */
-        /* width: 39vw; */
+        margin-top: 3.6vw;
+        margin-bottom: 4vw;
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        .button {
-          min-width: 256px;
-          height: 48px;
-          border-radius: 24px;
-          text-transform: uppercase;
-          font-size: 0.9em;
-          padding: 16px 20px;
-        }
         .button--try-free {
+          margin: 0 10px;
           color: #fff;
           background-color: $button-green-color;
-          /* margin: 16px 10px; */
-          margin: 0 10px;
+          @include button-style;
         }
         .button--rate {
+          margin: 0 10px;
           color: $header-color;
           border: 1px solid $header-color;
-          /* margin: 16px 10px; */
-          margin: 0 10px;
+          @include button-style;
         }
       }
     }
     .easy-install {
+      height: 27.56vw;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
-      /* align-items: flex-start; */
+      /* justify-content: space-evenly; */
+      &__header {
+        margin-top: 4.3vw;
+        @include header-style;
+      }
+      &__desc {
+        margin-top: 1.6vw;
+        @include text-style;
+      }
+      &__steps-wrapper {
+        margin-top: 1.9vw;
+        margin-bottom: 5.2vw;
+        margin-left: $inner-content-margin;
+        display: flex;
+        justify-content: flex-start;
+        .registration {
+          margin-right: 8.1vw;
+          padding-left: 10px;
+          width: 118px;
+          &__small-reference {
+            margin-top: 41px;
+            &--registration {
+              /* margin-top: 41px; */
+              @include small-reference-style;
+            }
+          }
+        }
+        .registration:before {
+          content: "1";
+          @include big-numbers-style;
+        }
+
+        .html-setup {
+          padding-left: 10px;
+          width: 194px;
+          &__small-reference {
+            margin-top: 41px;
+            &--setup {
+              @include small-reference-style;
+            }
+          }
+        }
+        .html-setup:before {
+          content: "2";
+          @include big-numbers-style;
+        }
+
+      }
+
+
+        /* img {
+          width: 50px;
+          height: 50px;
+        } */
+      /* } */
+      /* &__steps-wrapper {
+        display: flex;
+      } */
     }
+
+    .dashboard-install {
+      background: $section-bckg-color;
+      height: 46.25vw;
+      display: flex;
+      flex-direction: column;
+      &__header {
+        margin-top: 4.7vw;
+        @include header-style;
+      }
+    }
+    .html-install {
+      background: $section-bckg-color;
+      height: 46.25vw;
+      display: flex;
+      flex-direction: column;
+      &__header {
+        margin-top: 5vw;
+        @include header-style;
+      }
+      .install-list {
+        /* margin-top: 4.4vw; */
+        margin-left: calc(#{$inner-content-margin} + 26px);
+        margin-bottom: 5.1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30.1vw;
+        &__item {
+          &__reference {
+            @include list-reference-style;
+          }
+          &__desc {
+            margin-top: 1vw;
+            margin-left: 27px;
+            color: $text-color;
+          }
+        }
+        &__item::before {
+          content:"\A";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: $dot-list-color;
+          display: inline-block;
+          margin: 3px 30px 3px -15px;
+        }
+      }
+    }
+
   }
 }
 
@@ -73,10 +162,7 @@ body {
   color: #393e6b;
 } */
 
-a {
-  color: #0da088;
-  font-size: 1.5em;
-}
+
 /* button {
   width: 256px;
   height: 48px;
@@ -87,11 +173,7 @@ a {
   text-transform: uppercase;
 } */
 
-li::before {
-  content: "•"; color: #3b4269;
-  display: inline-block; width: 1em;
-  margin-left: -1em;
-}
+
 
 /* .main-content{
   display: flex;
