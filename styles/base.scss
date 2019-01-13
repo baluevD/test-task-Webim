@@ -7,12 +7,12 @@ body {
     display: flex;
     flex-direction: column;
     .webim-install {
-      height: 23.2vw;
-      min-height: 242px;
+      /* height: 23.2vw; */
+      /* min-height: 320px; */
       display: flex;
       flex-direction: column;
       background: $section-bckg-color;
-      /* justify-content: space-evenly; */
+      /* justify-content: flex-end; */
       &__header {
         margin-top: 4.7vw;
         @include header-style;
@@ -24,7 +24,7 @@ body {
       .button-wrapper {
         margin-left: $inner-content-margin;
         margin-top: 3.6vw;
-        margin-bottom: 4vw;
+        margin-bottom: 2vw;
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -33,6 +33,7 @@ body {
           color: #fff;
           background-color: $button-green-color;
           @include button-style;
+          margin-bottom: 2vw;
         }
         .button--rate {
           margin: 0 10px;
@@ -43,7 +44,8 @@ body {
       }
     }
     .easy-install {
-      height: 27.56vw;
+      /* height: 27.56vw; */
+      /* min-height: 360px; */
       display: flex;
       flex-direction: column;
       /* justify-content: space-evenly; */
@@ -94,45 +96,30 @@ body {
         }
 
       }
-
-
-        /* img {
-          width: 50px;
-          height: 50px;
-        } */
-      /* } */
-      /* &__steps-wrapper {
-        display: flex;
-      } */
     }
 
-    .dashboard-install {
-      background: $section-bckg-color;
-      height: 46.25vw;
-      display: flex;
-      flex-direction: column;
-      &__header {
-        margin-top: 4.7vw;
-        @include header-style;
-      }
-    }
+
     .html-install {
       background: $section-bckg-color;
-      height: 46.25vw;
+      /* height: 46.25vw;
+      min-height: 488px; */
+      min-width: 521px;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       &__header {
         margin-top: 5vw;
         @include header-style;
       }
       .install-list {
-        /* margin-top: 4.4vw; */
+        margin-top: 4.2vw;
         margin-left: calc(#{$inner-content-margin} + 26px);
         margin-bottom: 5.1vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 30.1vw;
+        /* min-height: 360px; */
         &__item {
           &__reference {
             @include list-reference-style;
@@ -155,36 +142,28 @@ body {
       }
     }
 
+    .dashboard-install {
+      background: $section-bckg-color;
+      /* height: 46.25vw; */
+      display: flex;
+      flex-direction: column;
+      &__header {
+        margin-top: 4.7vw;
+        @include header-style;
+      }
+    }
+
   }
 }
 
-/* nav, h1, h2 {
-  color: #393e6b;
-} */
-
-
-/* button {
-  width: 256px;
-  height: 48px;
-  border-radius: 24px;
-  border-width: 0;
-  color: #fff;
-  background-color: #2cd3b8;
-  text-transform: uppercase;
-} */
-
-
-
-/* .main-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
-} */
-
-/* section {
-  /* width: 60%; */
-  /* width: calc(100vw - 2*328px);
-} */
-
-/* screen width: 100vw */
+@media (min-width: 751px) and (max-width: 914px) {
+  body {
+    .main-content {
+      .html-install {
+        .install-list {
+          height: 60vw;
+        }
+      }
+    }
+  }
+}

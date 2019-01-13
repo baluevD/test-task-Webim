@@ -49,12 +49,12 @@ body .main-content {
 }
 
 body .main-content .webim-install {
-  height: 23.2vw;
-  min-height: 242px;
+  /* height: 23.2vw; */
+  /* min-height: 320px; */
   display: flex;
   flex-direction: column;
   background: #eff4f4;
-  /* justify-content: space-evenly; */
+  /* justify-content: flex-end; */
 }
 
 body .main-content .webim-install__header {
@@ -80,7 +80,7 @@ body .main-content .webim-install__desc {
 body .main-content .webim-install .button-wrapper {
   margin-left: 19.1vw;
   margin-top: 3.6vw;
-  margin-bottom: 4vw;
+  margin-bottom: 2vw;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -96,6 +96,7 @@ body .main-content .webim-install .button-wrapper .button--try-free {
   text-transform: uppercase;
   font-size: 0.9em;
   padding: 16px 20px;
+  margin-bottom: 2vw;
 }
 
 body .main-content .webim-install .button-wrapper .button--rate {
@@ -111,18 +112,11 @@ body .main-content .webim-install .button-wrapper .button--rate {
 }
 
 body .main-content .easy-install {
-  height: 27.56vw;
+  /* height: 27.56vw; */
+  /* min-height: 360px; */
   display: flex;
   flex-direction: column;
   /* justify-content: space-evenly; */
-  /* img {
-          width: 50px;
-          height: 50px;
-        } */
-  /* } */
-  /* &__steps-wrapper {
-        display: flex;
-      } */
 }
 
 body .main-content .easy-install__header {
@@ -165,6 +159,7 @@ body .main-content .easy-install__steps-wrapper .registration__small-reference {
 
 body .main-content .easy-install__steps-wrapper .registration__small-reference--registration {
   /* margin-top: 41px; */
+  color: #0da088;
   font-size: 1.125em;
   text-decoration: none;
   border-bottom: 2px solid #0da088;
@@ -190,6 +185,7 @@ body .main-content .easy-install__steps-wrapper .html-setup__small-reference {
 }
 
 body .main-content .easy-install__steps-wrapper .html-setup__small-reference--setup {
+  color: #0da088;
   font-size: 1.125em;
   text-decoration: none;
   border-bottom: 2px solid #0da088;
@@ -205,28 +201,14 @@ body .main-content .easy-install__steps-wrapper .html-setup:before {
   color: #e9e9ed;
 }
 
-body .main-content .dashboard-install {
-  background: #eff4f4;
-  height: 46.25vw;
-  display: flex;
-  flex-direction: column;
-}
-
-body .main-content .dashboard-install__header {
-  margin-top: 4.7vw;
-  margin-left: 19.1vw;
-  padding-left: 10px;
-  /* margin-top: 40px; */
-  color: #393e6b;
-  font-size: 2.25em;
-  text-transform: uppercase;
-}
-
 body .main-content .html-install {
   background: #eff4f4;
-  height: 46.25vw;
+  /* height: 46.25vw;
+      min-height: 488px; */
+  min-width: 521px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 body .main-content .html-install__header {
@@ -240,13 +222,14 @@ body .main-content .html-install__header {
 }
 
 body .main-content .html-install .install-list {
-  /* margin-top: 4.4vw; */
+  margin-top: 4.2vw;
   margin-left: calc(19.1vw + 26px);
   margin-bottom: 5.1vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 30.1vw;
+  /* min-height: 360px; */
 }
 
 body .main-content .html-install .install-list__item__reference {
@@ -272,26 +255,25 @@ body .main-content .html-install .install-list__item::before {
   margin: 3px 30px 3px -15px;
 }
 
-/* nav, h1, h2 {
-  color: #393e6b;
-} */
-/* button {
-  width: 256px;
-  height: 48px;
-  border-radius: 24px;
-  border-width: 0;
-  color: #fff;
-  background-color: #2cd3b8;
-  text-transform: uppercase;
-} */
-/* .main-content{
+body .main-content .dashboard-install {
+  background: #eff4f4;
+  /* height: 46.25vw; */
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
-} */
-/* section {
-  /* width: 60%; */
-/* width: calc(100vw - 2*328px);
-} */
-/* screen width: 100vw */
+}
+
+body .main-content .dashboard-install__header {
+  margin-top: 4.7vw;
+  margin-left: 19.1vw;
+  padding-left: 10px;
+  /* margin-top: 40px; */
+  color: #393e6b;
+  font-size: 2.25em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 751px) and (max-width: 914px) {
+  body .main-content .html-install .install-list {
+    height: 60vw;
+  }
+}
