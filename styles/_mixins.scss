@@ -46,3 +46,38 @@
   text-decoration: none;
   border-bottom: 2px solid $reference-color;
 }
+
+@mixin full-list-style {
+  margin-left: calc(#{$inner-content-margin} + 26px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__item {
+    &__reference {
+      @include list-reference-style;
+    }
+    &__desc {
+      margin-top: 1vw;
+      margin-left: 27px;
+      color: $text-color;
+    }
+  }
+  &__item::before {
+    content:"\A";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $dot-list-color;
+    display: inline-block;
+    margin: 3px 30px 3px -15px;
+  }
+}
+
+@mixin button-wrapper-style {
+  margin-left: $inner-content-margin;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* @mixin section-wrapper-style($) */

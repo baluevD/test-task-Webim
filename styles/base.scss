@@ -7,12 +7,9 @@ body {
     display: flex;
     flex-direction: column;
     .webim-install {
-      /* height: 23.2vw; */
-      /* min-height: 320px; */
       display: flex;
       flex-direction: column;
       background: $section-bckg-color;
-      /* justify-content: flex-end; */
       &__header {
         margin-top: 4.7vw;
         @include header-style;
@@ -21,22 +18,20 @@ body {
         margin-top: 2.4vw;
         @include text-style;
       }
-      .button-wrapper {
-        margin-left: $inner-content-margin;
+      &__button-wrapper {
         margin-top: 3.6vw;
         margin-bottom: 2vw;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        @include button-wrapper-style;
         .button--try-free {
           margin: 0 10px;
-          color: #fff;
-          background-color: $button-green-color;
-          @include button-style;
           margin-bottom: 2vw;
+          color: #fff;
+          background: $button-green-color;
+          @include button-style;
         }
         .button--rate {
           margin: 0 10px;
+          margin-bottom: 2vw;
           color: $header-color;
           border: 1px solid $header-color;
           @include button-style;
@@ -44,11 +39,8 @@ body {
       }
     }
     .easy-install {
-      /* height: 27.56vw; */
-      /* min-height: 360px; */
       display: flex;
       flex-direction: column;
-      /* justify-content: space-evenly; */
       &__header {
         margin-top: 4.3vw;
         @include header-style;
@@ -70,7 +62,6 @@ body {
           &__small-reference {
             margin-top: 41px;
             &--registration {
-              /* margin-top: 41px; */
               @include small-reference-style;
             }
           }
@@ -100,68 +91,219 @@ body {
 
 
     .html-install {
-      background: $section-bckg-color;
-      /* height: 46.25vw;
-      min-height: 488px; */
       min-width: 521px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      background: $section-bckg-color;
       &__header {
         margin-top: 5vw;
         @include header-style;
       }
       .install-list {
         margin-top: 4.2vw;
-        margin-left: calc(#{$inner-content-margin} + 26px);
         margin-bottom: 5.1vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         height: 30.1vw;
-        /* min-height: 360px; */
-        &__item {
-          &__reference {
-            @include list-reference-style;
-          }
-          &__desc {
-            margin-top: 1vw;
-            margin-left: 27px;
-            color: $text-color;
-          }
-        }
-        &__item::before {
-          content:"\A";
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: $dot-list-color;
-          display: inline-block;
-          margin: 3px 30px 3px -15px;
-        }
+        @include full-list-style;
       }
     }
 
     .dashboard-install {
-      background: $section-bckg-color;
-      /* height: 46.25vw; */
       display: flex;
       flex-direction: column;
       &__header {
         margin-top: 4.7vw;
         @include header-style;
       }
+      &__desc {
+        margin-top: 2.1vw;
+        @include text-style;
+        width: 40vw;
+      }
+      .install-list {
+        margin-top: 4.4vw;
+        margin-bottom: 4.9vw;
+        height: 33.1vw;
+        @include full-list-style;
+      }
     }
+      .after-install {
+        display: flex;
+        flex-direction: column;
+        background: $section-bckg-color;
+        &__header {
+          margin-top: 4.2vw;
+          @include header-style;
+        }
+        &__desc {
+          margin-top: 1.6vw;
+          width: 47vw;
+          @include text-style;
+        }
+        .step-list {
+          margin-top: 3.9vw;
+          margin-left: $inner-content-margin;
+          margin-bottom: 4.5vw;
+          padding-left: 10px;
+          height: 35.4vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &__item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &__image-block {
+              width: 74px;
+              height: 74px;
+              margin-right: 2.2vw;
+              border-radius: 50%;
+              background: $button-green-color;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .icon-01 {
+                width: 34px;
+                height: 25px;
+                margin: auto;
+                fill: #fff;
+              }
+              .icon-02 {
+                width: 29px;
+                height: 23px;
+                margin: auto;
+                fill: #fff;
+              }
+              .icon-03 {
+                width: 36px;
+                height: 36px;
+                margin: auto;
+                fill: #fff;
+              }
+              .icon-04 {
+                width: 40px;
+                height: 26px;
+                margin: auto;
+                fill: #fff;
+              }
+              .icon-05 {
+                width: 32px;
+                height: 37px;
+                margin: auto;
+                fill: #fff;
+              }
+              .icon-06 {
+                width: 32px;
+                height: 29px;
+                margin: auto;
+                fill: #fff;
+              }
+            }
+            &__header {
+              margin-right: 10px;
+              font-size: 1.5em;
+              color: $header-color;
+            }
+            &__desc {
+              padding-top: 0.2em;
+              font-size: 1.125em;
+              color: $header-color;
+            }
+          }
+        }
+        &__button-wrapper {
+          margin-bottom: 2.2vw;
+          @include button-wrapper-style;
+          .button--all-features {
+            margin: 0 10px;
+            margin-bottom: 2vw;
+            color: #fff;
+            background: $button-green-color;
+            @include button-style;
+          }
+          .button--test-free {
+            margin: 0 10px;
+            margin-bottom: 2vw;
+            color: #fff;
+            background: $header-color;
+            @include button-style;
+          }
+        }
+      }
 
   }
 }
 
-@media (min-width: 751px) and (max-width: 914px) {
+@media (min-width: 751px) and (max-width: 992px) {
   body {
     .main-content {
+      .webim-install {
+        &__header {
+          margin-left: 10vw;
+        }
+        &__desc {
+          margin-left: 10vw;
+        }
+        &__button-wrapper {
+          margin-left: 10vw;
+        }
+      }
+      .easy-install {
+        &__header {
+          margin-left: 10vw;
+        }
+        &__desc {
+          margin-left: 10vw;
+        }
+        &__steps-wrapper {
+          margin-left: 10vw;
+        }
+      }
       .html-install {
+        &__header {
+          margin-left: 10vw;
+        }
         .install-list {
-          height: 60vw;
+          margin-left: 13.5vw;
+          height: 496px;
+        }
+      }
+      .dashboard-install {
+        &__header {
+          margin-left: 10vw;
+        }
+        &__desc {
+          margin-left: 10vw;
+        }
+        .install-list {
+          margin-left: 13.5vw;
+          height: 568px;
+        }
+      }
+      .after-install {
+        &__header {
+          margin-left: 10vw;
+        }
+        &__desc {
+          margin-left: 10vw;
+        }
+        .step-list {
+          margin-left: 10vw;
+        }
+        &__button-wrapper {
+          margin-left: 10vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1330px) {
+  body {
+    .main-content {
+      .after-install {
+        .step-list {
+          height: 472px;
         }
       }
     }
