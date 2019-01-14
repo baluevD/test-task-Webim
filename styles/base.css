@@ -42,6 +42,14 @@ body {
   font-family: Ubuntu, sans-serif;
 }
 
+body .header {
+  /* height: 100px; */
+  background: #f3f7f7;
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.125) 50%, #eff4f4 100%) 0 0 100 0 repeat;
+  border-width: 0px 0px 7px 0px;
+  border-style: solid;
+}
+
 body .main-content {
   display: flex;
   flex-direction: column;
@@ -54,7 +62,7 @@ body .main-content .webim-install {
 }
 
 body .main-content .webim-install__header {
-  margin-top: 4.7vw;
+  margin-top: calc(4.7vw - 7px);
   margin-left: 19.1vw;
   padding-left: 10px;
   /* margin-top: 40px; */
@@ -570,14 +578,14 @@ body .main-content .other-channels .channels-list__item__reference--mobile-chat-
 }
 
 body .rights-contacts {
+  min-height: 196px;
   padding: 3.4vw 4.1vw;
   display: flex;
-  /* flex-direction: column; */
   background: #393e6b;
 }
 
 body .rights-contacts .rights-wrapper {
-  /* align-self: flex-start; */
+  min-height: 140px;
   height: 9.6vw;
 }
 
@@ -600,6 +608,8 @@ body .rights-contacts .rights-wrapper .desc__line {
 
 body .rights-contacts .contacts-tel-wrapper {
   margin-left: 11.3vw;
+  margin-right: 10px;
+  min-height: 140px;
   height: 9.6vw;
   display: flex;
   flex-direction: column;
@@ -659,6 +669,7 @@ body .rights-contacts .contacts-tel-wrapper .tel-list__item__desc {
 
 body .rights-contacts .contacts-email-wrapper {
   margin-left: auto;
+  min-height: 140px;
   height: 9.6vw;
 }
 
@@ -701,6 +712,29 @@ body .rights-contacts .contacts-email-wrapper .icons-container .icon-twitter {
 
 body .rights-contacts .contacts-email-wrapper .icons-container .icon-skype {
   width: 20px;
+}
+
+body .fixed-icon {
+  right: 35px;
+  bottom: 23px;
+  /* position: -webkit-sticky; */
+  position: fixed;
+  /* position: sticky; */
+}
+
+body .fixed-icon .icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2cd3b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .fixed-icon .icon-wrapper .icon {
+  width: 25px;
+  height: 25px;
 }
 
 @media (min-width: 751px) and (max-width: 992px) {
@@ -771,5 +805,11 @@ body .rights-contacts .contacts-email-wrapper .icons-container .icon-skype {
   }
   body .main-content .other-channels .channels-list__item {
     margin-bottom: 27px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 821px) {
+  body .rights-contacts .contacts-tel-wrapper {
+    margin-left: 30px;
   }
 }
