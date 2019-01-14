@@ -274,12 +274,14 @@ body {
       @include section-inner-style(html-install, header);
       @include section-inner-style(dashboard-install, header, desc);
       @include section-inner-style(after-install, header, desc, button-wrapper);
+
       .html-install {
         .install-list {
           margin-left: 13.5vw;
           height: 496px;
         }
       }
+
       .dashboard-install {
         .install-list {
           margin-left: 13.5vw;
@@ -288,11 +290,9 @@ body {
       }
 
       .after-install {
-
         .step-list {
           margin-left: 10vw;
         }
-
       }
     }
   }
