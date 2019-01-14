@@ -20,11 +20,11 @@
   padding: 0 10px 10px 10px;
   width: 39vw;
   min-width: 540px;
-  /* line-height: 1.5; */
   color: $text-color;
 }
 
 @mixin small-reference-style {
+  padding: 0 1px;
   color: $reference-color;
   font-size: 1.125em;
   text-decoration: none;
@@ -41,6 +41,8 @@
 }
 
 @mixin list-reference-style {
+  padding: 0 1px;
+  height: 25px;
   color: $reference-color;
   font-size: 1.5em;
   text-decoration: none;
@@ -55,6 +57,7 @@
   &__item {
     &__reference {
       @include list-reference-style;
+      margin-left: -1px;
     }
     &__desc {
       margin-top: 1vw;

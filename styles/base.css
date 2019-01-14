@@ -38,7 +38,6 @@ ul {
   list-style: none;
 }
 
-/* $inner-content-margin: calc(100% / $koeff); */
 body {
   font-family: Ubuntu, sans-serif;
 }
@@ -70,7 +69,6 @@ body .main-content .webim-install__desc {
   padding: 0 10px 10px 10px;
   width: 39vw;
   min-width: 540px;
-  /* line-height: 1.5; */
   color: #74757b;
 }
 
@@ -128,7 +126,6 @@ body .main-content .easy-install__desc {
   padding: 0 10px 10px 10px;
   width: 39vw;
   min-width: 540px;
-  /* line-height: 1.5; */
   color: #74757b;
 }
 
@@ -151,6 +148,7 @@ body .main-content .easy-install__steps-wrapper .registration__small-reference {
 }
 
 body .main-content .easy-install__steps-wrapper .registration__small-reference--registration {
+  padding: 0 1px;
   color: #0da088;
   font-size: 1.125em;
   text-decoration: none;
@@ -177,6 +175,7 @@ body .main-content .easy-install__steps-wrapper .html-setup__small-reference {
 }
 
 body .main-content .easy-install__steps-wrapper .html-setup__small-reference--setup {
+  padding: 0 1px;
   color: #0da088;
   font-size: 1.125em;
   text-decoration: none;
@@ -222,10 +221,13 @@ body .main-content .html-install .install-list {
 }
 
 body .main-content .html-install .install-list__item__reference {
+  padding: 0 1px;
+  height: 25px;
   color: #0da088;
   font-size: 1.5em;
   text-decoration: none;
   border-bottom: 2px solid #0da088;
+  margin-left: -1px;
 }
 
 body .main-content .html-install .install-list__item__desc {
@@ -265,7 +267,6 @@ body .main-content .dashboard-install__desc {
   padding: 0 10px 10px 10px;
   width: 39vw;
   min-width: 540px;
-  /* line-height: 1.5; */
   color: #74757b;
   width: 40vw;
 }
@@ -281,10 +282,13 @@ body .main-content .dashboard-install .install-list {
 }
 
 body .main-content .dashboard-install .install-list__item__reference {
+  padding: 0 1px;
+  height: 25px;
   color: #0da088;
   font-size: 1.5em;
   text-decoration: none;
   border-bottom: 2px solid #0da088;
+  margin-left: -1px;
 }
 
 body .main-content .dashboard-install .install-list__item__desc {
@@ -326,7 +330,6 @@ body .main-content .after-install__desc {
   padding: 0 10px 10px 10px;
   width: 39vw;
   min-width: 540px;
-  /* line-height: 1.5; */
   color: #74757b;
 }
 
@@ -444,6 +447,128 @@ body .main-content .after-install__button-wrapper .button--test-free {
   padding: 16px 20px;
 }
 
+body .main-content .other-channels {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+body .main-content .other-channels__desc {
+  margin-left: 19.1vw;
+  padding: 0 10px 10px 10px;
+  width: 39vw;
+  min-width: 540px;
+  color: #74757b;
+  margin-top: 4vw;
+  margin-bottom: 4.5vw;
+  width: 40vw;
+  color: #393e6b;
+  font-size: 1.125em;
+}
+
+body .main-content .other-channels .channels-list {
+  height: 210px;
+  margin: 0 calc(19.1vw + 10px) 4.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  /* max-width: 900px; */
+  /* flex-basis: 56.8vw; */
+  /* &__item--mobile-chat {
+          width: 320px;
+          /* display: block; */
+}
+
+body .main-content .other-channels .channels-list__item {
+  margin-left: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* align-content: flex-start; */
+  /* flex-wrap: wrap; */
+  flex-basis: 290px;
+}
+
+body .main-content .other-channels .channels-list__item__image-block {
+  width: 40px;
+  height: 40px;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon {
+  width: 40px;
+  height: 40px;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--social-networks .st0 {
+  fill: #3B4269;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--messengers .st0 {
+  clip-path: url(#SVGID_2_);
+  fill: #3DD3A1;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--messengers .st1 {
+  fill: #FFFFFF;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--chatbots .st0 {
+  fill: #33AFD1;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--chatbots .st1 {
+  fill: #FFFFFF;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--feedback .st0 {
+  fill: #DAB81A;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--yandexd .st0 {
+  fill: url(#Combined-Shape_1_);
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--mobile-chat .st0 {
+  clip-path: url(#SVGID_2_);
+  fill: #88BC17;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--mobile-chat .st1 {
+  fill: #FFFFFF;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--email .st0 {
+  fill: #5F98D1;
+}
+
+body .main-content .other-channels .channels-list__item__image-block .icon--email .st1 {
+  fill: #FFFFFF;
+}
+
+body .main-content .other-channels .channels-list__item__reference {
+  height: 21px;
+  margin-left: calc(1.7vw - 1px);
+  padding: 0 1px;
+  color: #0da088;
+  font-size: 1.125em;
+  text-decoration: none;
+  border-bottom: 2px solid #0da088;
+}
+
+body .main-content .other-channels .channels-list__item__reference--mobile-chat {
+  border: 0;
+}
+
+body .main-content .other-channels .channels-list__item__reference--mobile-chat--first-line {
+  border-bottom: 2px solid #0da088;
+}
+
+body .main-content .other-channels .channels-list__item__reference--mobile-chat--second-line {
+  border-bottom: 2px solid #0da088;
+}
+
 @media (min-width: 751px) and (max-width: 992px) {
   body .main-content .webim-install__header {
     margin-left: 10vw;
@@ -481,6 +606,9 @@ body .main-content .after-install__button-wrapper .button--test-free {
   body .main-content .after-install__button-wrapper {
     margin-left: 10vw;
   }
+  body .main-content .other-channels__desc {
+    margin-left: 10vw;
+  }
   body .main-content .html-install .install-list {
     margin-left: 13.5vw;
     height: 496px;
@@ -492,10 +620,22 @@ body .main-content .after-install__button-wrapper .button--test-free {
   body .main-content .after-install .step-list {
     margin-left: 10vw;
   }
+  body .main-content .other-channels .channels-list {
+    margin-left: 10vw;
+  }
 }
 
 @media (min-width: 751px) and (max-width: 1330px) {
   body .main-content .after-install .step-list {
     height: 472px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 843px) {
+  body .main-content .other-channels .channels-list {
+    height: 447px;
+  }
+  body .main-content .other-channels .channels-list__item {
+    margin-bottom: 27px;
   }
 }
