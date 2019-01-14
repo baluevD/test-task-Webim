@@ -569,6 +569,140 @@ body .main-content .other-channels .channels-list__item__reference--mobile-chat-
   border-bottom: 2px solid #0da088;
 }
 
+body .rights-contacts {
+  padding: 3.4vw 4.1vw;
+  display: flex;
+  /* flex-direction: column; */
+  background: #393e6b;
+}
+
+body .rights-contacts .rights-wrapper {
+  /* align-self: flex-start; */
+  height: 9.6vw;
+}
+
+body .rights-contacts .rights-wrapper .logo {
+  width: 146px;
+  margin-bottom: 25px;
+}
+
+body .rights-contacts .rights-wrapper .logo__image {
+  width: 146px;
+}
+
+body .rights-contacts .rights-wrapper .desc {
+  color: #b6b9c9;
+}
+
+body .rights-contacts .rights-wrapper .desc__line {
+  font-size: 0.875em;
+}
+
+body .rights-contacts .contacts-tel-wrapper {
+  margin-left: 11.3vw;
+  height: 9.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  /* width: 300px; */
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item {
+  width: 290px;
+  /* margin-bottom: 20px; */
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item .icon-wrapper {
+  width: 30px;
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item .icon-wrapper .phone-icon {
+  width: 30px;
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item .tel {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.375em;
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item .tel-main {
+  margin-left: 10px;
+  font-size: 1.625em;
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item .desc {
+  color: #b6b9c9;
+  font-size: 0.875em;
+  /* margin-bottom: 28px; */
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item__tel-main {
+  margin-bottom: 19px;
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item__tel {
+  margin-bottom: 10px;
+}
+
+body .rights-contacts .contacts-tel-wrapper .tel-list__item__desc {
+  margin-bottom: 16px;
+}
+
+body .rights-contacts .contacts-email-wrapper {
+  margin-left: auto;
+  height: 9.6vw;
+}
+
+body .rights-contacts .contacts-email-wrapper .email {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+body .rights-contacts .contacts-email-wrapper .desc {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #b6b9c9;
+}
+
+body .rights-contacts .contacts-email-wrapper .icons-container {
+  display: flex;
+  align-items: center;
+}
+
+body .rights-contacts .contacts-email-wrapper .icons-container .icon-wrapper .icon {
+  fill: #fff;
+}
+
+body .rights-contacts .contacts-email-wrapper .icons-container .icon-vk {
+  margin-right: 24px;
+  width: 24px;
+}
+
+body .rights-contacts .contacts-email-wrapper .icons-container .icon-facebook {
+  margin-right: 24px;
+  width: 10px;
+}
+
+body .rights-contacts .contacts-email-wrapper .icons-container .icon-twitter {
+  margin-right: 19px;
+  width: 22px;
+}
+
+body .rights-contacts .contacts-email-wrapper .icons-container .icon-skype {
+  width: 20px;
+}
+
 @media (min-width: 751px) and (max-width: 992px) {
   body .main-content .webim-install__header {
     margin-left: 10vw;

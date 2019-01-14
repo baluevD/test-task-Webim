@@ -374,6 +374,118 @@ body {
       }
     }
   }
+  .rights-contacts {
+    padding: 3.4vw 4.1vw;
+    display: flex;
+    /* flex-direction: column; */
+    background: $header-color;
+    .rights-wrapper {
+      /* align-self: flex-start; */
+      height: 9.6vw;
+      .logo {
+        width: 146px;
+        margin-bottom: 25px;
+        &__image {
+          width: 146px;
+        }
+      }
+      .desc {
+        color: $footer-text-color;
+        &__line {
+          font-size: 0.875em;
+        }
+      }
+    }
+    .contacts-tel-wrapper {
+      margin-left: 11.3vw;
+      height: 9.6vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      /* width: 300px; */
+      .tel-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__item {
+          width: 290px;
+          /* margin-bottom: 20px; */
+          display: flex;
+          /* flex-wrap: wrap; */
+          .icon-wrapper {
+            width: 30px;
+            .phone-icon {
+              width: 30px;
+            }
+          }
+          .tel {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.375em;
+          }
+          .tel-main {
+            margin-left: 10px;
+            font-size: 1.625em;
+          }
+          .desc {
+            color: $footer-text-color;
+            font-size: 0.875em;
+            /* margin-bottom: 28px; */
+          }
+        }
+        &__item__tel-main {
+          margin-bottom: 19px;
+        }
+        &__item__tel {
+          margin-bottom: 10px;
+        }
+        &__item__desc {
+          margin-bottom: 16px;
+        }
+      }
+
+    }
+    .contacts-email-wrapper {
+      margin-left: auto;
+      height: 9.6vw;
+      .email {
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 1em;
+        text-decoration: none;
+      }
+      .desc {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: $footer-text-color;
+      }
+      .icons-container {
+        display: flex;
+        align-items: center;
+        .icon-wrapper {
+
+          .icon {
+            fill: #fff;
+          }
+        }
+        .icon-vk {
+          margin-right: 24px;
+          width: 24px;
+        }
+        .icon-facebook {
+          margin-right: 24px;
+          width: 10px;
+        }
+        .icon-twitter {
+          margin-right: 19px;
+          width: 22px;
+        }
+        .icon-skype {
+          width: 20px;
+        }
+      }
+    }
+  }
 }
 @media (min-width: 751px) and (max-width: 992px) {
   body {
