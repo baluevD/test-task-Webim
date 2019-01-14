@@ -84,8 +84,7 @@ body .main-content .webim-install__button-wrapper {
 }
 
 body .main-content .webim-install__button-wrapper .button--try-free {
-  margin: 0 10px;
-  margin-bottom: 2vw;
+  margin: 0 10px 2vw;
   color: #fff;
   background: #2cd3b8;
   min-width: 256px;
@@ -97,8 +96,7 @@ body .main-content .webim-install__button-wrapper .button--try-free {
 }
 
 body .main-content .webim-install__button-wrapper .button--rate {
-  margin: 0 10px;
-  margin-bottom: 2vw;
+  margin: 0 10px 2vw;
   color: #393e6b;
   border: 1px solid #393e6b;
   min-width: 256px;
@@ -423,8 +421,7 @@ body .main-content .after-install__button-wrapper {
 }
 
 body .main-content .after-install__button-wrapper .button--all-features {
-  margin: 0 10px;
-  margin-bottom: 2vw;
+  margin: 0 10px 2vw;
   color: #fff;
   background: #2cd3b8;
   min-width: 256px;
@@ -436,8 +433,7 @@ body .main-content .after-install__button-wrapper .button--all-features {
 }
 
 body .main-content .after-install__button-wrapper .button--test-free {
-  margin: 0 10px;
-  margin-bottom: 2vw;
+  margin: 0 10px 2vw;
   color: #fff;
   background: #393e6b;
   min-width: 256px;
@@ -470,19 +466,11 @@ body .main-content .after-install__button-wrapper .button--test-free {
   body .main-content .html-install__header {
     margin-left: 10vw;
   }
-  body .main-content .html-install .install-list {
-    margin-left: 13.5vw;
-    height: 496px;
-  }
   body .main-content .dashboard-install__header {
     margin-left: 10vw;
   }
   body .main-content .dashboard-install__desc {
     margin-left: 10vw;
-  }
-  body .main-content .dashboard-install .install-list {
-    margin-left: 13.5vw;
-    height: 568px;
   }
   body .main-content .after-install__header {
     margin-left: 10vw;
@@ -490,10 +478,18 @@ body .main-content .after-install__button-wrapper .button--test-free {
   body .main-content .after-install__desc {
     margin-left: 10vw;
   }
-  body .main-content .after-install .step-list {
+  body .main-content .after-install__button-wrapper {
     margin-left: 10vw;
   }
-  body .main-content .after-install__button-wrapper {
+  body .main-content .html-install .install-list {
+    margin-left: 13.5vw;
+    height: 496px;
+  }
+  body .main-content .dashboard-install .install-list {
+    margin-left: 13.5vw;
+    height: 568px;
+  }
+  body .main-content .after-install .step-list {
     margin-left: 10vw;
   }
 }

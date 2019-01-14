@@ -3,69 +3,82 @@
 
 body {
   font-family: #{$family}, sans-serif;
+
   .main-content {
     display: flex;
     flex-direction: column;
+
     .webim-install {
       display: flex;
       flex-direction: column;
       background: $section-bckg-color;
+
       &__header {
         margin-top: 4.7vw;
         @include header-style;
       }
+
       &__desc {
         margin-top: 2.4vw;
         @include text-style;
       }
+
       &__button-wrapper {
         margin-top: 3.6vw;
         margin-bottom: 2vw;
         @include button-wrapper-style;
+
         .button--try-free {
-          margin: 0 10px;
-          margin-bottom: 2vw;
+          margin: 0 10px 2vw;
           color: #fff;
           background: $button-green-color;
           @include button-style;
         }
+
         .button--rate {
-          margin: 0 10px;
-          margin-bottom: 2vw;
+          margin: 0 10px 2vw;
           color: $header-color;
           border: 1px solid $header-color;
           @include button-style;
         }
       }
     }
+
     .easy-install {
       display: flex;
       flex-direction: column;
+
       &__header {
         margin-top: 4.3vw;
         @include header-style;
       }
+
       &__desc {
         margin-top: 1.6vw;
         @include text-style;
       }
+
       &__steps-wrapper {
         margin-top: 1.9vw;
         margin-bottom: 5.2vw;
         margin-left: $inner-content-margin;
         display: flex;
         justify-content: flex-start;
+
         .registration {
           margin-right: 8.1vw;
           padding-left: 10px;
           width: 118px;
+
           &__small-reference {
             margin-top: 41px;
+
             &--registration {
               @include small-reference-style;
             }
           }
         }
+
         .registration:before {
           content: "1";
           @include big-numbers-style;
@@ -74,21 +87,22 @@ body {
         .html-setup {
           padding-left: 10px;
           width: 194px;
+
           &__small-reference {
             margin-top: 41px;
+
             &--setup {
               @include small-reference-style;
             }
           }
         }
+
         .html-setup:before {
           content: "2";
           @include big-numbers-style;
         }
-
       }
     }
-
 
     .html-install {
       min-width: 521px;
@@ -96,10 +110,12 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       background: $section-bckg-color;
+
       &__header {
         margin-top: 5vw;
         @include header-style;
       }
+
       .install-list {
         margin-top: 4.2vw;
         margin-bottom: 5.1vw;
@@ -111,15 +127,18 @@ body {
     .dashboard-install {
       display: flex;
       flex-direction: column;
+
       &__header {
         margin-top: 4.7vw;
         @include header-style;
       }
+
       &__desc {
         margin-top: 2.1vw;
         @include text-style;
         width: 40vw;
       }
+
       .install-list {
         margin-top: 4.4vw;
         margin-bottom: 4.9vw;
@@ -127,177 +146,157 @@ body {
         @include full-list-style;
       }
     }
-      .after-install {
+
+    .after-install {
+      display: flex;
+      flex-direction: column;
+      background: $section-bckg-color;
+
+      &__header {
+        margin-top: 4.2vw;
+        @include header-style;
+      }
+
+      &__desc {
+        margin-top: 1.6vw;
+        width: 47vw;
+        @include text-style;
+      }
+
+      .step-list {
+        margin-top: 3.9vw;
+        margin-left: $inner-content-margin;
+        margin-bottom: 4.5vw;
+        padding-left: 10px;
+        height: 35.4vw;
         display: flex;
         flex-direction: column;
-        background: $section-bckg-color;
-        &__header {
-          margin-top: 4.2vw;
-          @include header-style;
-        }
-        &__desc {
-          margin-top: 1.6vw;
-          width: 47vw;
-          @include text-style;
-        }
-        .step-list {
-          margin-top: 3.9vw;
-          margin-left: $inner-content-margin;
-          margin-bottom: 4.5vw;
-          padding-left: 10px;
-          height: 35.4vw;
+        justify-content: space-between;
+
+        &__item {
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          &__item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            &__image-block {
-              width: 74px;
-              height: 74px;
-              margin-right: 2.2vw;
-              border-radius: 50%;
-              background: $button-green-color;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              .icon-01 {
-                width: 34px;
-                height: 25px;
-                margin: auto;
-                fill: #fff;
-              }
-              .icon-02 {
-                width: 29px;
-                height: 23px;
-                margin: auto;
-                fill: #fff;
-              }
-              .icon-03 {
-                width: 36px;
-                height: 36px;
-                margin: auto;
-                fill: #fff;
-              }
-              .icon-04 {
-                width: 40px;
-                height: 26px;
-                margin: auto;
-                fill: #fff;
-              }
-              .icon-05 {
-                width: 32px;
-                height: 37px;
-                margin: auto;
-                fill: #fff;
-              }
-              .icon-06 {
-                width: 32px;
-                height: 29px;
-                margin: auto;
-                fill: #fff;
-              }
-            }
-            &__header {
-              margin-right: 10px;
-              font-size: 1.5em;
-              color: $header-color;
-            }
-            &__desc {
-              padding-top: 0.2em;
-              font-size: 1.125em;
-              color: $header-color;
-            }
-          }
-        }
-        &__button-wrapper {
-          margin-bottom: 2.2vw;
-          @include button-wrapper-style;
-          .button--all-features {
-            margin: 0 10px;
-            margin-bottom: 2vw;
-            color: #fff;
+          justify-content: flex-start;
+          align-items: center;
+
+          &__image-block {
+            width: 74px;
+            height: 74px;
+            margin-right: 2.2vw;
+            border-radius: 50%;
             background: $button-green-color;
-            @include button-style;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-01 {
+              width: 34px;
+              height: 25px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-02 {
+              width: 29px;
+              height: 23px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-03 {
+              width: 36px;
+              height: 36px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-04 {
+              width: 40px;
+              height: 26px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-05 {
+              width: 32px;
+              height: 37px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-06 {
+              width: 32px;
+              height: 29px;
+              margin: auto;
+              fill: #fff;
+            }
           }
-          .button--test-free {
-            margin: 0 10px;
-            margin-bottom: 2vw;
-            color: #fff;
-            background: $header-color;
-            @include button-style;
+
+          &__header {
+            margin-right: 10px;
+            font-size: 1.5em;
+            color: $header-color;
+          }
+
+          &__desc {
+            padding-top: 0.2em;
+            font-size: 1.125em;
+            color: $header-color;
           }
         }
       }
 
+      &__button-wrapper {
+        margin-bottom: 2.2vw;
+        @include button-wrapper-style;
+
+        .button--all-features {
+          margin: 0 10px 2vw;
+          color: #fff;
+          background: $button-green-color;
+          @include button-style;
+        }
+
+        .button--test-free {
+          margin: 0 10px 2vw;
+          color: #fff;
+          background: $header-color;
+          @include button-style;
+        }
+      }
+    }
   }
 }
-
 @media (min-width: 751px) and (max-width: 992px) {
   body {
     .main-content {
-      .webim-install {
-        &__header {
-          margin-left: 10vw;
-        }
-        &__desc {
-          margin-left: 10vw;
-        }
-        &__button-wrapper {
-          margin-left: 10vw;
-        }
-      }
-      .easy-install {
-        &__header {
-          margin-left: 10vw;
-        }
-        &__desc {
-          margin-left: 10vw;
-        }
-        &__steps-wrapper {
-          margin-left: 10vw;
-        }
-      }
+      @include section-inner-style(webim-install, header, desc, button-wrapper);
+      @include section-inner-style(easy-install, header, desc, steps-wrapper);
+      @include section-inner-style(html-install, header);
+      @include section-inner-style(dashboard-install, header, desc);
+      @include section-inner-style(after-install, header, desc, button-wrapper);
       .html-install {
-        &__header {
-          margin-left: 10vw;
-        }
         .install-list {
           margin-left: 13.5vw;
           height: 496px;
         }
       }
       .dashboard-install {
-        &__header {
-          margin-left: 10vw;
-        }
-        &__desc {
-          margin-left: 10vw;
-        }
         .install-list {
           margin-left: 13.5vw;
           height: 568px;
         }
       }
+
       .after-install {
-        &__header {
-          margin-left: 10vw;
-        }
-        &__desc {
-          margin-left: 10vw;
-        }
+
         .step-list {
           margin-left: 10vw;
         }
-        &__button-wrapper {
-          margin-left: 10vw;
-        }
+
       }
     }
   }
 }
-
 @media (min-width: 751px) and (max-width: 1330px) {
   body {
     .main-content {

@@ -80,4 +80,10 @@
   flex-wrap: wrap;
 }
 
-/* @mixin section-wrapper-style($) */
+@mixin section-inner-style($section,  $parts...) {
+  @each $i in $parts {
+    .#{$section}__#{nth($i, 1)} {
+        margin-left: 10vw;
+    }
+  }
+}
