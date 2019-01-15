@@ -44,7 +44,6 @@ body {
 
 body .header {
   height: 107px;
-  /* background: $header-block-color; */
   border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.05) 50%, #eff4f4 100%) 0 0 100 0 repeat;
   border-width: 0px 0px 7px 0px;
   border-style: solid;
@@ -116,7 +115,6 @@ body .main-content .webim-install__header {
   margin-top: calc(4.7vw - 7px);
   margin-left: 19.1vw;
   padding-left: 10px;
-  /* margin-top: 40px; */
   color: #393e6b;
   font-size: 2.25em;
   text-transform: uppercase;
@@ -129,6 +127,14 @@ body .main-content .webim-install__desc {
   width: 39vw;
   min-width: 540px;
   color: #74757b;
+}
+
+body .main-content .webim-install__desc .mobile--first {
+  display: none;
+}
+
+body .main-content .webim-install__desc .mobile--third {
+  display: none;
 }
 
 body .main-content .webim-install__button-wrapper {
@@ -173,7 +179,6 @@ body .main-content .easy-install__header {
   margin-top: 4.3vw;
   margin-left: 19.1vw;
   padding-left: 10px;
-  /* margin-top: 40px; */
   color: #393e6b;
   font-size: 2.25em;
   text-transform: uppercase;
@@ -263,7 +268,6 @@ body .main-content .html-install__header {
   margin-top: 5vw;
   margin-left: 19.1vw;
   padding-left: 10px;
-  /* margin-top: 40px; */
   color: #393e6b;
   font-size: 2.25em;
   text-transform: uppercase;
@@ -314,7 +318,6 @@ body .main-content .dashboard-install__header {
   margin-top: 4.7vw;
   margin-left: 19.1vw;
   padding-left: 10px;
-  /* margin-top: 40px; */
   color: #393e6b;
   font-size: 2.25em;
   text-transform: uppercase;
@@ -376,7 +379,6 @@ body .main-content .after-install__header {
   margin-top: 4.2vw;
   margin-left: 19.1vw;
   padding-left: 10px;
-  /* margin-top: 40px; */
   color: #393e6b;
   font-size: 2.25em;
   text-transform: uppercase;
@@ -533,11 +535,6 @@ body .main-content .other-channels .channels-list {
   align-items: space-between;
   align-content: space-between;
   flex-wrap: wrap;
-  /* max-width: 900px; */
-  /* flex-basis: 56.8vw; */
-  /* &__item--mobile-chat {
-          width: 320px;
-          /* display: block; */
 }
 
 body .main-content .other-channels .channels-list__item {
@@ -545,8 +542,6 @@ body .main-content .other-channels .channels-list__item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* align-content: flex-start; */
-  /* flex-wrap: wrap; */
   flex-basis: 290px;
 }
 
@@ -879,4 +874,392 @@ body .fixed-icon .icon-wrapper .icon {
     margin-left: 1vw;
     margin-right: 0vw;
   }
+}
+
+@media (min-width: 320px) and (max-width: 750px) {
+  body .main-content .webim-install {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body .main-content .webim-install__header {
+    margin-top: calc(12.3vw - 7px);
+    margin-left: 0;
+    padding-left: 0;
+    /* margin-top: 40px; */
+    color: #393e6b;
+    font-size: 3em;
+    text-transform: uppercase;
+    flex-basis: 616px;
+  }
+  body .main-content .webim-install__desc {
+    margin-top: 8.5vw;
+    margin-left: 0;
+    padding: 0;
+    min-width: 0;
+    font-size: 1.625em;
+    color: #74757b;
+    flex-basis: 616px;
+  }
+  body .main-content .webim-install__desc .mobile--first {
+    display: block;
+  }
+  body .main-content .webim-install__desc .mobile--third {
+    display: block;
+  }
+  body .main-content .webim-install__button-wrapper {
+    margin-top: 12.8vw;
+    margin-bottom: 10.2vw;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 616px;
+  }
+  body .main-content .webim-install__button-wrapper .button--try-free {
+    margin: 0 10px 4.2vw;
+    color: #fff;
+    background: #2cd3b8;
+    /* min-width: 256px; */
+    height: 90px;
+    border-radius: 45px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  body .main-content .webim-install__button-wrapper .button--rate {
+    margin: 0 10px 4.2vw;
+    color: #393e6b;
+    border: 1px solid #393e6b;
+    /* min-width: 256px; */
+    height: 90px;
+    border-radius: 45px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  /* .easy-install {
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        margin-top: 4.3vw;
+        @include header-style;
+      }
+
+      &__desc {
+        margin-top: 1.6vw;
+        @include text-style;
+      }
+
+      &__steps-wrapper {
+        margin-top: 1.9vw;
+        margin-bottom: 5.2vw;
+        margin-left: $inner-content-margin;
+        display: flex;
+        justify-content: flex-start;
+
+        .registration {
+          margin-right: 8.1vw;
+          padding-left: 10px;
+          width: 118px;
+
+          &__small-reference {
+            margin-top: 41px;
+
+            &--registration {
+              @include small-reference-style;
+            }
+          }
+        }
+
+        .registration:before {
+          content: "1";
+          @include big-numbers-style;
+        }
+
+        .html-setup {
+          padding-left: 10px;
+          width: 194px;
+
+          &__small-reference {
+            margin-top: 41px;
+
+            &--setup {
+              @include small-reference-style;
+            }
+          }
+        }
+
+        .html-setup:before {
+          content: "2";
+          @include big-numbers-style;
+        }
+      }
+    }
+
+    .html-install {
+      min-width: 521px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: $section-bckg-color;
+
+      &__header {
+        margin-top: 5vw;
+        @include header-style;
+      }
+
+      .install-list {
+        margin-top: 4.2vw;
+        margin-bottom: 5.1vw;
+        height: 30.1vw;
+        @include full-list-style;
+      }
+    }
+
+    .dashboard-install {
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        margin-top: 4.7vw;
+        @include header-style;
+      }
+
+      &__desc {
+        margin-top: 2.1vw;
+        @include text-style;
+        width: 40vw;
+      }
+
+      .install-list {
+        margin-top: 4.4vw;
+        margin-bottom: 4.9vw;
+        height: 33.1vw;
+        @include full-list-style;
+      }
+    }
+
+    .after-install {
+      display: flex;
+      flex-direction: column;
+      background: $section-bckg-color;
+
+      &__header {
+        margin-top: 4.2vw;
+        @include header-style;
+      }
+
+      &__desc {
+        margin-top: 1.6vw;
+        width: 47vw;
+        @include text-style;
+      }
+
+      .step-list {
+        margin-top: 3.9vw;
+        margin-left: $inner-content-margin;
+        margin-bottom: 4.5vw;
+        padding-left: 10px;
+        height: 35.4vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          &__image-block {
+            width: 74px;
+            height: 74px;
+            margin-right: 2.2vw;
+            border-radius: 50%;
+            background: $button-green-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-01 {
+              width: 34px;
+              height: 25px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-02 {
+              width: 29px;
+              height: 23px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-03 {
+              width: 36px;
+              height: 36px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-04 {
+              width: 40px;
+              height: 26px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-05 {
+              width: 32px;
+              height: 37px;
+              margin: auto;
+              fill: #fff;
+            }
+
+            .icon-06 {
+              width: 32px;
+              height: 29px;
+              margin: auto;
+              fill: #fff;
+            }
+          }
+
+          &__header {
+            margin-right: 10px;
+            font-size: 1.5em;
+            color: $header-color;
+          }
+
+          &__desc {
+            padding-top: 0.2em;
+            font-size: 1.125em;
+            color: $header-color;
+          }
+        }
+      }
+
+      &__button-wrapper {
+        margin-bottom: 2.2vw;
+        @include button-wrapper-style;
+
+        .button--all-features {
+          margin: 0 10px 2vw;
+          color: #fff;
+          background: $button-green-color;
+          @include button-style;
+        }
+
+        .button--test-free {
+          margin: 0 10px 2vw;
+          color: #fff;
+          background: $header-color;
+          @include button-style;
+        }
+      }
+    }
+    .other-channels {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      &__desc {
+        @include text-style;
+        margin-top: 4vw;
+        margin-bottom: 4.5vw;
+        width: 40vw;
+        color: $header-color;
+        font-size: 1.125em;
+      }
+      .channels-list {
+        height: 210px;
+        margin: 0 calc(19.1vw + 10px) 4.5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+        &__item {
+          margin-left: 4px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-basis: 290px;
+          &__image-block {
+            width: 40px;
+            height: 40px;
+            .icon {
+              width: 40px;
+              height: 40px;
+            }
+            .icon--social-networks {
+              .st0 {
+                fill: #3B4269;
+              }
+            }
+            .icon--messengers {
+              .st0 {
+                clip-path: url(#SVGID_2_);
+                fill: #3DD3A1;
+              }
+
+              .st1 {
+                fill: #FFFFFF;
+              }
+            }
+            .icon--chatbots {
+              .st0 {
+                fill:#33AFD1;
+              }
+              .st1 {
+                fill:#FFFFFF;
+              }
+            }
+            .icon--feedback {
+              .st0 {
+                fill:#DAB81A;
+              }
+            }
+            .icon--yandexd {
+              .st0 {
+                fill:url(#Combined-Shape_1_);
+              }
+            }
+            .icon--mobile-chat {
+              .st0 {
+                clip-path:url(#SVGID_2_);
+                fill:#88BC17;
+              }
+              .st1 {
+                fill:#FFFFFF;
+              }
+            }
+            .icon--email {
+              .st0 {
+                fill:#5F98D1;
+              }
+              .st1 {
+                fill:#FFFFFF;
+              }
+            }
+          }
+          &__reference {
+            height: 21px;
+            margin-left: calc(1.7vw - 1px);
+            @include small-reference-style;
+          }
+          &__reference--mobile-chat {
+            border: 0;
+            &--first-line {
+                border-bottom: 2px solid $reference-color;
+            }
+            &--second-line {
+                border-bottom: 2px solid $reference-color;
+            }
+          }
+
+        }
+      }
+    } */
+  /* } */
 }
