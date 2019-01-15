@@ -43,11 +43,62 @@ body {
 }
 
 body .header {
-  /* height: 100px; */
-  background: #f3f7f7;
-  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.125) 50%, #eff4f4 100%) 0 0 100 0 repeat;
+  height: 107px;
+  /* background: $header-block-color; */
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.05) 50%, #eff4f4 100%) 0 0 100 0 repeat;
   border-width: 0px 0px 7px 0px;
   border-style: solid;
+}
+
+body .header .menu-wrapper {
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  color: #393e6b;
+  font-size: 1.125em;
+  text-transform: uppercase;
+}
+
+body .header .menu-wrapper .login-menu {
+  padding-left: 4.1vw;
+  width: 40.9vw;
+  background: url("../images/header-bckg.jpg") right top no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body .header .menu-wrapper .login-menu__item--login {
+  margin-right: 1.7vw;
+}
+
+body .header .menu-wrapper .section-menu {
+  padding-right: 4.1vw;
+  width: 59.1vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body .header .menu-wrapper .section-menu__item {
+  margin-right: 1.7vw;
+}
+
+body .header .menu-wrapper .section-menu__item .logo-wrapper {
+  width: 114px;
+}
+
+body .header .menu-wrapper .section-menu__item .logo-wrapper .logo {
+  width: 114px;
+}
+
+body .header .menu-wrapper .section-menu__item--logo {
+  margin-left: 1.7vw;
+  margin-right: 0vw;
+}
+
+body .header .menu-wrapper .mobile-menu {
+  display: none;
 }
 
 body .main-content {
@@ -811,5 +862,21 @@ body .fixed-icon .icon-wrapper .icon {
 @media (min-width: 751px) and (max-width: 821px) {
   body .rights-contacts .contacts-tel-wrapper {
     margin-left: 30px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 876px) {
+  body .header .menu-wrapper {
+    font-size: 1em;
+  }
+  body .header .menu-wrapper .login-menu__item--login {
+    margin-right: 1vw;
+  }
+  body .header .menu-wrapper .section-menu__item {
+    margin-right: 1vw;
+  }
+  body .header .menu-wrapper .section-menu__item--logo {
+    margin-left: 1vw;
+    margin-right: 0vw;
   }
 }
