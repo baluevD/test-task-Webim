@@ -640,12 +640,12 @@ body .rights-contacts .rights-wrapper {
   height: 9.6vw;
 }
 
-body .rights-contacts .rights-wrapper .logo {
+body .rights-contacts .rights-wrapper .logo-wrapper {
   width: 146px;
   margin-bottom: 25px;
 }
 
-body .rights-contacts .rights-wrapper .logo__image {
+body .rights-contacts .rights-wrapper .logo-wrapper .logo {
   width: 146px;
 }
 
