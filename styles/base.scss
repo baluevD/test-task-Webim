@@ -229,8 +229,11 @@ body {
 
       &__desc {
         margin-top: 1.6vw;
-        width: 47vw;
         @include text-style;
+        width: 50vw;
+        .mobile {
+          display: none;
+        }
       }
 
       .step-list {
@@ -833,12 +836,16 @@ body {
           @include header-style;
           @include mobile-header-style;
           @include mobile-all-block-basis;
+          padding-right: 12vw;
         }
 
         &__desc {
           margin-top: 7.4vw;
           @include mobile-text-style;
           @include mobile-all-block-basis;
+          .mobile {
+            display: block;
+          }
         }
 
          .step-list {
@@ -1103,15 +1110,17 @@ body {
       @include mobile-section-inner-style(html-install, header);
       .html-install {
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: stretch;
         &__header {
-          max-height: 110px;
+          max-width: 92.5vw;
+          max-height: 100px;
+          font-size: 2.5em;
         }
         .install-list {
           padding: 0 12px;
           &__item {
-            max-width: 296px;
+            max-width: 92.5vw;
             &__reference {
               margin-left: 11px;
               font-size: 1em;
@@ -1129,16 +1138,25 @@ body {
       }
       @include mobile-section-inner-style(dashboard-install, header, desc);
       .dashboard-install {
+        align-items: flex-start;
+        min-height: 1200px;
         &__header {
+          padding-left: 0;
+          padding-right: 0;
+          max-width: 92.5vw;
           font-size: 2.5em;
         }
         &__desc {
+          padding-left: 0;
+          padding-right: 0;
+          max-width: 92.5vw;
+          margin-top: 0px;
         }
         .install-list {
+          margin-top: 0px;
           padding: 0 12px;
-          min-height: 680px;
           &__item {
-            max-width: 296px;
+            max-width: 92.5vw;
             &__reference {
               margin-left: 11px;
               font-size: 1em;
@@ -1146,6 +1164,17 @@ body {
             &__desc {
               font-size: 0.875em;
             }
+            &__desc--fluid {
+              font-size: 0.875em;
+              .mobile {
+                display: none;
+              }
+            }
+          }
+          &__item::before {
+            margin-left: -19px;
+            height: 4px;
+            width: 4px;
           }
         }
       }

@@ -420,12 +420,16 @@ body .main-content .after-install__header {
 
 body .main-content .after-install__desc {
   margin-top: 1.6vw;
-  width: 47vw;
   margin-left: 19.1vw;
   padding: 0 10px 10px 10px;
   width: 39vw;
   min-width: 540px;
   color: #74757b;
+  width: 50vw;
+}
+
+body .main-content .after-install__desc .mobile {
+  display: none;
 }
 
 body .main-content .after-install .step-list {
@@ -1200,6 +1204,7 @@ body .fixed-icon .icon-wrapper .icon {
     font-size: 3em;
     text-transform: uppercase;
     flex-basis: 616px;
+    padding-right: 12vw;
   }
   body .main-content .after-install__desc {
     margin-top: 7.4vw;
@@ -1209,6 +1214,9 @@ body .fixed-icon .icon-wrapper .icon {
     font-size: 1.625em;
     color: #74757b;
     flex-basis: 616px;
+  }
+  body .main-content .after-install__desc .mobile {
+    display: block;
   }
   body .main-content .after-install .step-list {
     margin-top: 10.1vw;
@@ -1469,17 +1477,19 @@ body .fixed-icon .icon-wrapper .icon {
   }
   body .main-content .html-install {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: stretch;
   }
   body .main-content .html-install__header {
-    max-height: 110px;
+    max-width: 92.5vw;
+    max-height: 100px;
+    font-size: 2.5em;
   }
   body .main-content .html-install .install-list {
     padding: 0 12px;
   }
   body .main-content .html-install .install-list__item {
-    max-width: 296px;
+    max-width: 92.5vw;
   }
   body .main-content .html-install .install-list__item__reference {
     margin-left: 11px;
@@ -1499,15 +1509,28 @@ body .fixed-icon .icon-wrapper .icon {
   body .main-content .dashboard-install__desc {
     padding: 0 12px;
   }
+  body .main-content .dashboard-install {
+    align-items: flex-start;
+    min-height: 1200px;
+  }
   body .main-content .dashboard-install__header {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 92.5vw;
     font-size: 2.5em;
   }
+  body .main-content .dashboard-install__desc {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 92.5vw;
+    margin-top: 0px;
+  }
   body .main-content .dashboard-install .install-list {
+    margin-top: 0px;
     padding: 0 12px;
-    min-height: 680px;
   }
   body .main-content .dashboard-install .install-list__item {
-    max-width: 296px;
+    max-width: 92.5vw;
   }
   body .main-content .dashboard-install .install-list__item__reference {
     margin-left: 11px;
@@ -1515,6 +1538,17 @@ body .fixed-icon .icon-wrapper .icon {
   }
   body .main-content .dashboard-install .install-list__item__desc {
     font-size: 0.875em;
+  }
+  body .main-content .dashboard-install .install-list__item__desc--fluid {
+    font-size: 0.875em;
+  }
+  body .main-content .dashboard-install .install-list__item__desc--fluid .mobile {
+    display: none;
+  }
+  body .main-content .dashboard-install .install-list__item::before {
+    margin-left: -19px;
+    height: 4px;
+    width: 4px;
   }
   body .main-content .after-install__header {
     padding: 0 12px;
