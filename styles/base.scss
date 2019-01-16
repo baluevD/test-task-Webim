@@ -9,14 +9,20 @@ body {
 
   .header {
     height: 107px;
-    border-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 50%, $section-bckg-color 100%) 0 0 100 0 repeat;
+    -o-border-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 50%, $section-bckg-color 100%) 0 0 100 0 repeat;
+       border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.25)), color-stop(50%, rgba(0,0,0,0.05)), to($section-bckg-color)) 0 0 100 0 repeat;
+       border-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 50%, $section-bckg-color 100%) 0 0 100 0 repeat;
     border-width: 0 0 7px 0;
     border-style: solid;
 
     .menu-wrapper {
       height: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       color: $header-color;
       font-size: 1.125em;
       text-transform: uppercase;
@@ -25,9 +31,15 @@ body {
         padding-left: 4.1vw;
         width: 40.9vw;
         background: url("../images/header-bckg.jpg") right top no-repeat;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         &__item--login {
           margin-right: 1.7vw;
@@ -37,9 +49,15 @@ body {
       .section-menu {
         padding-right: 4.1vw;
         width: 59.1vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         &__item {
           margin-right: 1.7vw;
@@ -66,12 +84,22 @@ body {
   }
 
   .main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     .webim-install {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       background: $section-bckg-color;
 
       &__header {
@@ -116,8 +144,13 @@ body {
     }
 
     .easy-install {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
 
       &__header {
         margin-top: 4.3vw;
@@ -137,8 +170,12 @@ body {
         margin-top: 1.9vw;
         margin-bottom: 5.2vw;
         margin-left: $inner-content-margin;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
 
         .registration {
           margin-right: 8.1vw;
@@ -181,9 +218,16 @@ body {
 
     .html-install {
       min-width: 521px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       background: $section-bckg-color;
 
       &__header {
@@ -208,8 +252,13 @@ body {
     }
 
     .dashboard-install {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
 
       &__header {
         margin-top: 4.7vw;
@@ -231,8 +280,13 @@ body {
     }
 
     .after-install {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       background: $section-bckg-color;
 
       &__header {
@@ -256,14 +310,27 @@ body {
         margin-bottom: 4.5vw;
         padding-left: 10px;
         height: 35.4vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
 
         &__item {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: flex-start;
-          align-items: center;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
 
           &__image-block {
             width: 74px;
@@ -271,9 +338,15 @@ body {
             margin-right: 2.2vw;
             border-radius: 50%;
             background: $button-green-color;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             .icon-01 {
               width: 34px;
@@ -357,9 +430,16 @@ body {
     }
 
     .other-channels {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
 
       &__desc {
         @include text-style;
@@ -373,18 +453,30 @@ body {
       .channels-list {
         height: 210px;
         margin: 0 calc(#{$inner-content-margin} + 10px) 4.5vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: space-between;
-        align-content: space-between;
-        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 
         &__item {
           margin-left: 4px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          flex-basis: 290px;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -ms-flex-preferred-size: 290px;
+              flex-basis: 290px;
 
           &__image-block {
             width: 40px;
@@ -403,7 +495,8 @@ body {
 
             .icon--messengers {
               .st0 {
-                clip-path: url("#SVGID_2_");
+                -webkit-clip-path: url("#SVGID_2_");
+                        clip-path: url("#SVGID_2_");
                 fill: #3DD3A1;
               }
 
@@ -436,7 +529,8 @@ body {
 
             .icon--mobile-chat {
               .st0 {
-                clip-path: url("#SVGID_2_");
+                -webkit-clip-path: url("#SVGID_2_");
+                        clip-path: url("#SVGID_2_");
                 fill: #88BC17;
               }
 
@@ -481,6 +575,8 @@ body {
   .rights-contacts {
     min-height: 196px;
     padding: 3.4vw 4.1vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: $header-color;
 
@@ -513,18 +609,34 @@ body {
       margin-right: 10px;
       min-height: 140px;
       height: 9.6vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: stretch;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: stretch;
+          -ms-flex-pack: stretch;
+              justify-content: stretch;
 
       .tel-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
 
         &__item {
           width: 290px;
           /* margin-bottom: 20px; */
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           /* flex-wrap: wrap; */
           .icon-wrapper {
@@ -587,8 +699,12 @@ body {
       }
 
       .icons-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         .icon-wrapper {
           .icon {
@@ -629,9 +745,15 @@ body {
       height: 50px;
       border-radius: 50%;
       background: $button-green-color;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
 
       .icon {
         width: 25px;
@@ -760,10 +882,11 @@ body {
           display: block;
           position: relative;
           top: 32px;
-          /* left: 50px; */
           z-index: 1;
           -webkit-user-select: none;
-          user-select: none;
+          -moz-user-select: none;
+           -ms-user-select: none;
+               user-select: none;
 
           input {
             display: block;
@@ -780,21 +903,25 @@ body {
 
           input:checked ~ span {
             opacity: 1;
-            transform: rotate(45deg) translate(-2px, -2px);
+            -webkit-transform: rotate(45deg) translate(-2px, -2px);
+                    transform: rotate(45deg) translate(-2px, -2px);
             background: #fff;
           }
 
           input:checked ~ span:nth-last-child(2) {
-            transform: rotate(-45deg) translate(0, 0);
+            -webkit-transform: rotate(-45deg) translate(0, 0);
+                    transform: rotate(-45deg) translate(0, 0);
           }
 
           input:checked ~ span:nth-last-child(3) {
             opacity: 0;
-            transform: rotate(0deg) scale(0.2, 0.2);
+            -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+                    transform: rotate(0deg) scale(0.2, 0.2);
           }
 
           input:checked ~ ul#menu {
-            transform: none;
+            -webkit-transform: none;
+                    transform: none;
           }
 
           span {
@@ -805,16 +932,22 @@ body {
             position: relative;
             background: $button-green-color;
             z-index: 1;
-            transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            -webkit-transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
           }
 
           span:first-child {
-            transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
           }
 
           span:nth-last-child(2) {
-            transform-origin: 0 100%;
+            -webkit-transform-origin: 0 100%;
+                    transform-origin: 0 100%;
           }
 
           #menu {
@@ -825,9 +958,14 @@ body {
             padding-top: 120px;
             background: $button-green-color;
             -webkit-font-smoothing: antialiased;
-            transform-origin: 0 0;
-            transform: translate(-100%, 0);
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            -webkit-transform: translate(-100%, 0);
+                    transform: translate(-100%, 0);
+            -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
             li {
               padding: 10px 0;
@@ -905,7 +1043,9 @@ body {
 
         &__steps-wrapper {
           margin: 12.8vw 0 11.5vw;
-          justify-content: flex-start;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
           @include mobile-all-block-basis;
 
           .registration {
@@ -1023,9 +1163,16 @@ body {
           padding-left: 0;
           height: 109.6vw;
           @include mobile-all-block-basis;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
 
           &__item {
             &__image-block {
@@ -1121,15 +1268,26 @@ body {
           @include mobile-all-block-basis;
           height: 100vw;
           margin: 0 0 14.2vw;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: flex-start;
-          flex-wrap: wrap;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
 
           &__item {
             margin-left: 0;
-            flex-basis: 0;
-            flex-grow: 1;
+            -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+            -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
 
             &__image-block {
               width: 67px;
@@ -1148,7 +1306,8 @@ body {
 
               .icon--messengers {
                 .st0 {
-                  clip-path: url("#SVGID_2_");
+                  -webkit-clip-path: url("#SVGID_2_");
+                          clip-path: url("#SVGID_2_");
                   fill: #3DD3A1;
                 }
 
@@ -1181,7 +1340,8 @@ body {
 
               .icon--mobile-chat {
                 .st0 {
-                  clip-path: url("#SVGID_2_");
+                  -webkit-clip-path: url("#SVGID_2_");
+                          clip-path: url("#SVGID_2_");
                   fill: #88BC17;
                 }
 
@@ -1222,31 +1382,45 @@ body {
           }
 
           &__item--first {
-            order: 1;
+            -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                    order: 1;
           }
 
           &__item--second {
-            order: 4;
+            -webkit-box-ordinal-group: 5;
+                -ms-flex-order: 4;
+                    order: 4;
           }
 
           &__item--third {
-            order: 6;
+            -webkit-box-ordinal-group: 7;
+                -ms-flex-order: 6;
+                    order: 6;
           }
 
           &__item--fourth {
-            order: 2;
+            -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                    order: 2;
           }
 
           &__item--fifth {
-            order: 5;
+            -webkit-box-ordinal-group: 6;
+                -ms-flex-order: 5;
+                    order: 5;
           }
 
           &__item--sixth {
-            order: 7;
+            -webkit-box-ordinal-group: 8;
+                -ms-flex-order: 7;
+                    order: 7;
           }
 
           &__item--seventh {
-            order: 3;
+            -webkit-box-ordinal-group: 4;
+                -ms-flex-order: 3;
+                    order: 3;
           }
         }
       }
@@ -1256,12 +1430,20 @@ body {
       height: 22.1vw;
       padding: 0 10.1vw;
       background: $header-color;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
 
       .rights-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         .logo-wrapper {
           display: none;
@@ -1298,8 +1480,13 @@ body {
 
       .easy-install {
         &__steps-wrapper {
-          flex-direction: column;
-          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
 
           .registration {
             margin-left: 50px;
@@ -1315,9 +1502,16 @@ body {
       @include mobile-section-inner-style(html-install, header);
 
       .html-install {
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
 
         &__header {
           max-width: 92.5vw;
@@ -1351,7 +1545,9 @@ body {
       @include mobile-section-inner-style(dashboard-install, header, desc);
 
       .dashboard-install {
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         min-height: 1200px;
 
         &__header {
@@ -1411,7 +1607,9 @@ body {
           height: 109.6vw;
 
           &__item {
-            align-items: baseline;
+            -webkit-box-align: baseline;
+                -ms-flex-align: baseline;
+                    align-items: baseline;
 
             &__image-block {
               width: 34px;
@@ -1464,7 +1662,9 @@ body {
           padding: 0 12px;
 
           &__item {
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             &__image-block {
               width: 33px;

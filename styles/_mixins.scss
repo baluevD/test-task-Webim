@@ -7,9 +7,15 @@
 }
 
 @mixin mobile-section-flex {
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @mixin mobile-header-style {
   margin-left: 0;
@@ -19,7 +25,8 @@
   text-transform: uppercase;
 }
 @mixin mobile-all-block-basis {
-  flex-basis: 616px;
+  -ms-flex-preferred-size: 616px;
+      flex-basis: 616px;
 }
 
 @mixin mobile-text-style {
@@ -32,10 +39,18 @@
 
 @mixin mobile-button-wrapper-style {
   margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @mixin mobile-button-style {
@@ -63,9 +78,16 @@
 
 @mixin mobile-full-list-style {
   margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 37px;
   &__item {
     padding-right: 8vw;
@@ -143,9 +165,16 @@
 
 @mixin full-list-style {
   margin-left: calc(#{$inner-content-margin} + 26px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   &__item {
     &__reference {
       @include list-reference-style;
@@ -176,9 +205,14 @@
 
 @mixin button-wrapper-style {
   margin-left: $inner-content-margin;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @mixin section-inner-style($section,  $parts...) {
