@@ -1,8 +1,11 @@
 @import 'reset','variables', 'mixins';
-@import url("https://fonts.googleapis.com/css?family=#{$family}&amp;subset=cyrillic");
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic,cyrillic-ext');
+}
 
 body {
-  font-family: #{$family}, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   .header {
     height: 107px;
     border-image:  linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 50%, $section-bckg-color 100%) 0 0 100 0 repeat;
@@ -71,12 +74,14 @@ body {
       &__desc {
         margin-top: 2.4vw;
         @include text-style;
-        .mobile--first {
+        padding-bottom: 0;
+        .mobile {
           display: none;
         }
-        .mobile--third {
-          display: none;
-        }
+      }
+      &__desc--second {
+        margin-top: 0;
+        padding-bottom: 10px;
       }
 
       &__button-wrapper {
@@ -107,6 +112,9 @@ body {
       &__header {
         margin-top: 4.3vw;
         @include header-style;
+        .mobile {
+          display: none;
+        }
       }
 
       &__desc {
@@ -170,6 +178,9 @@ body {
       &__header {
         margin-top: 5vw;
         @include header-style;
+        .mobile {
+          display: none;
+        }
       }
 
       .install-list {
@@ -177,6 +188,9 @@ body {
         margin-bottom: 5.1vw;
         height: 30.1vw;
         @include full-list-style;
+        .mobile {
+          display: none;
+        }
       }
     }
 
@@ -297,6 +311,9 @@ body {
             padding-top: 0.2em;
             font-size: 1.125em;
             color: $header-color;
+            .mobile-step-header {
+              display: none;
+            }
           }
         }
       }
@@ -432,6 +449,7 @@ body {
       min-height: 140px;
       height: 9.6vw;
       .logo-wrapper {
+        display: block;
         width: 146px;
         margin-bottom: 25px;
         .logo {
@@ -446,6 +464,7 @@ body {
       }
     }
     .contacts-tel-wrapper {
+      display: block;
       margin-left: 11.3vw;
       margin-right: 10px;
       min-height: 140px;
@@ -453,7 +472,6 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: stretch;
-      /* width: 300px; */
       .tel-list {
         display: flex;
         flex-direction: column;
@@ -497,6 +515,7 @@ body {
 
     }
     .contacts-email-wrapper {
+      display: block;
       margin-left: auto;
       min-height: 140px;
       height: 9.6vw;
@@ -539,11 +558,10 @@ body {
     }
   }
   .fixed-icon {
+    display: block;
     right: 35px;
     bottom: 23px;
-    /* position: -webkit-sticky; */
     position: fixed;
-    /* position: sticky; */
     .icon-wrapper {
       width: 50px;
       height: 50px;
@@ -663,9 +681,7 @@ body {
     .main-content {
 
       .webim-install {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        @include mobile-section-flex;
         &__header {
           margin-top: calc(12.3vw - 7px);
           @include mobile-header-style;
@@ -676,10 +692,12 @@ body {
           margin-top: 8.5vw;
           @include mobile-text-style;
           @include mobile-all-block-basis;
-          .mobile--first {
-            display: block;
-          }
-          .mobile--third {
+          padding-right: 16vw;
+        }
+        &__desc--second {
+          margin-top: 0;
+          padding-right: 8vw;
+          .mobile {
             display: block;
           }
         }
@@ -697,338 +715,514 @@ body {
           }
 
           .button--rate {
-            margin: 0 10px 4.2vw;
+            margin: 0 10px 0;
             color: $header-color;
             border: 1px solid $header-color;
             @include mobile-button-style;
           }
         }
       }
+      .easy-install {
+        @include mobile-section-flex;
+
+        &__header {
+          margin-top: 12.8vw;
+          @include mobile-header-style;
+          @include mobile-all-block-basis;
+          padding-right: 16vw;
+        }
+
+        &__desc {
+          margin-top: 7.7vw;
+          @include mobile-text-style;
+          @include mobile-all-block-basis;
+          padding-right: 16vw;
+        }
+
+        &__steps-wrapper {
+          margin: 12.8vw 0 11.5vw;
+          justify-content: flex-start;
+          @include mobile-all-block-basis;
+          .registration {
+            margin-left: 4.8vw;
+            margin-right: 26.4vw;
+            padding-left: 0;
+            width: 118px;
+
+            &__small-reference {
+              margin-top: 3.7vw;
+
+              &--registration {
+                @include mobile-small-reference-style;
+              }
+            }
+          }
+
+          .registration:before {
+            content: "1";
+            @include big-numbers-style;
+          }
+
+          .html-setup {
+            padding-left: 0;
+            width: 194px;
+
+            &__small-reference {
+              margin-top: 3.7vw;
+
+              &--setup {
+                @include mobile-small-reference-style;
+              }
+            }
+          }
+
+          .html-setup:before {
+            content: "2";
+            @include big-numbers-style;
+          }
+        }
+      }
+      .html-install {
+        @include mobile-section-flex;
+        &__header {
+          margin-top: 11.9vw;
+          @include mobile-header-style;
+          @include mobile-all-block-basis;
+          padding-right: 24vw;
+        }
+
+        .install-list {
+          margin-top: 8.7vw;
+          margin-bottom: 13.4vw;
+          height: 144.5vw;
+          @include mobile-full-list-style;
+          @include mobile-all-block-basis;
+        }
+      }
+      .dashboard-install {
+        @include mobile-section-flex;
+
+        &__header {
+          margin-top: 12.2vw;
+          @include mobile-header-style;
+          @include mobile-all-block-basis;
+        }
+
+        &__desc {
+          margin-top: 7.7vw;
+          @include mobile-text-style;
+          @include mobile-all-block-basis;
+        }
+
+        .install-list {
+          margin-top: 12vw;
+          margin-bottom: 11.3vw;
+          height: 172vw;
+          @include mobile-full-list-style;
+          @include mobile-all-block-basis;
+          &__item {
+            padding-right: 2vw;
+          }
+        }
+      }
+      .after-install {
+        @include mobile-section-flex;
+
+        &__header {
+          margin-top: 11.5vw;
+          @include header-style;
+          @include mobile-header-style;
+          @include mobile-all-block-basis;
+        }
+
+        &__desc {
+          margin-top: 7.4vw;
+          @include mobile-text-style;
+          @include mobile-all-block-basis;
+        }
+
+         .step-list {
+          margin-top: 10.1vw;
+          margin-left: 0;
+          margin-bottom: 0;
+          padding-left: 0;
+          height: 109.6vw;
+          @include mobile-all-block-basis;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &__item {
+            &__image-block {
+              width: 102px;
+              height: 102px;
+              margin-right: 2.2vw;
+
+              .icon-01 {
+                width: 49px;
+                height: 36px;
+              }
+
+              .icon-02 {
+                width: 40px;
+                height: 32px;
+              }
+
+              .icon-03 {
+                width: 50px;
+                height: 50px;
+              }
+
+              .icon-04 {
+                width: 56px;
+                height: 36px;
+              }
+
+              .icon-05 {
+                width: 44px;
+                height: 51px;
+              }
+
+              .icon-06 {
+                width: 45px;
+                height: 40px;
+              }
+            }
+
+            &__header {
+              display: none;
+            }
+
+            &__desc {
+              padding-top: 0.2em;
+              font-size: 1.5em;
+              color: $header-color;
+              width: 61.4vw;
+              .mobile-step-header {
+                display: inline-block;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+
+        &__button-wrapper {
+          margin-top: 13.1vw;
+          margin-bottom: 13.1vw;
+          @include mobile-button-wrapper-style;
+          @include mobile-all-block-basis;
+
+          .button--all-features {
+            margin: 0 10px 4.2vw;
+            color: #fff;
+            background: $button-green-color;
+            @include mobile-button-style;
+          }
+
+          .button--test-free {
+            margin: 0 10px 0;
+            color: #fff;
+            background: $header-color;
+            @include mobile-button-style;
+          }
+        }
+      }
+      .other-channels {
+        @include mobile-section-flex;
+        &__desc {
+          @include mobile-text-style;
+          @include mobile-all-block-basis;
+          margin-top: 12.1vw;
+          margin-bottom: 10.6vw;
+          padding-right: 8vw;
+          color: $header-color;
+          font-size: 1.5em;
+        }
+        .channels-list {
+          @include mobile-all-block-basis;
+          height: 100vw;
+          margin: 0 0 14.2vw 0;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          &__item {
+            margin-left: 0;
+            flex-basis: 0;
+            flex-grow: 1;
+            &__image-block {
+              width: 67px;
+              height: 67px;
+              .icon {
+                width: 67px;
+                height: 67px;
+              }
+              .icon--social-networks {
+                .st0 {
+                  fill: #3B4269;
+                }
+              }
+              .icon--messengers {
+                .st0 {
+                  clip-path: url(#SVGID_2_);
+                  fill: #3DD3A1;
+                }
+
+                .st1 {
+                  fill: #FFFFFF;
+                }
+              }
+              .icon--chatbots {
+                .st0 {
+                  fill:#33AFD1;
+                }
+                .st1 {
+                  fill:#FFFFFF;
+                }
+              }
+              .icon--feedback {
+                .st0 {
+                  fill:#DAB81A;
+                }
+              }
+              .icon--yandexd {
+                .st0 {
+                  fill:url(#Combined-Shape_1_);
+                }
+              }
+              .icon--mobile-chat {
+                .st0 {
+                  clip-path:url(#SVGID_2_);
+                  fill:#88BC17;
+                }
+                .st1 {
+                  fill:#FFFFFF;
+                }
+              }
+              .icon--email {
+                .st0 {
+                  fill:#5F98D1;
+                }
+                .st1 {
+                  fill:#FFFFFF;
+                }
+              }
+            }
+            &__reference {
+              height: 1.2em;
+              margin-left: calc(1.7vw - 1px);
+              @include mobile-small-reference-style;
+              font-size: 1.5em;
+            }
+            &__reference--mobile-chat {
+              border: 0;
+              &--first-line {
+                  border-bottom: 2px solid $reference-color;
+              }
+              &--second-line {
+                  border-bottom: 2px solid $reference-color;
+              }
+            }
+
+          }
+          &__item--first {
+            order: 1;
+          }
+          &__item--second {
+            order: 4;
+          }
+          &__item--third {
+            order: 6;
+          }
+          &__item--fourth {
+            order: 2;
+          }
+          &__item--fifth {
+            order: 5;
+          }
+          &__item--sixth {
+            order: 7;
+          }
+          &__item--seventh {
+            order: 3;
+          }
+        }
+      }
+    }
+    .rights-contacts {
+      height: 22.1vw;
+      padding: 0 10.1vw;
+      background: $header-color;
+      align-items: center;
+      .rights-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo-wrapper {
+          display: none;
+        }
+        .desc {
+          color: #fff;
+          &__line {
+            font-size: 1.5em;
+          }
+        }
+      }
+      .contacts-tel-wrapper {
+        display: none;
+      }
+      .contacts-email-wrapper {
+        display: none;
+      }
+    }
+    .fixed-icon {
+      display: none;
     }
   }
+}
 
-
-    /* .easy-install {
-      display: flex;
-      flex-direction: column;
-
-      &__header {
-        margin-top: 4.3vw;
-        @include header-style;
-      }
-
-      &__desc {
-        margin-top: 1.6vw;
-        @include text-style;
-      }
-
-      &__steps-wrapper {
-        margin-top: 1.9vw;
-        margin-bottom: 5.2vw;
-        margin-left: $inner-content-margin;
-        display: flex;
-        justify-content: flex-start;
-
-        .registration {
-          margin-right: 8.1vw;
-          padding-left: 10px;
-          width: 118px;
-
-          &__small-reference {
-            margin-top: 41px;
-
-            &--registration {
-              @include small-reference-style;
-            }
+@media (min-width: 320px) and (max-width: 640px) {
+  body {
+    .main-content {
+      @include mobile-section-inner-style(webim-install, header, desc);
+      @include mobile-section-inner-style(easy-install, header, desc);
+      .easy-install {
+        &__steps-wrapper {
+          flex-direction: column;
+          align-items: center;
+          .registration {
+            margin-left: 50px;
+            margin-right: auto;
+          }
+          .html-setup {
+            margin-left: 50px;
+            margin-right: auto;
           }
         }
-
-        .registration:before {
-          content: "1";
-          @include big-numbers-style;
-        }
-
-        .html-setup {
-          padding-left: 10px;
-          width: 194px;
-
-          &__small-reference {
-            margin-top: 41px;
-
-            &--setup {
-              @include small-reference-style;
-            }
-          }
-        }
-
-        .html-setup:before {
-          content: "2";
-          @include big-numbers-style;
-        }
       }
-    }
-
-    .html-install {
-      min-width: 521px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      background: $section-bckg-color;
-
-      &__header {
-        margin-top: 5vw;
-        @include header-style;
-      }
-
-      .install-list {
-        margin-top: 4.2vw;
-        margin-bottom: 5.1vw;
-        height: 30.1vw;
-        @include full-list-style;
-      }
-    }
-
-    .dashboard-install {
-      display: flex;
-      flex-direction: column;
-
-      &__header {
-        margin-top: 4.7vw;
-        @include header-style;
-      }
-
-      &__desc {
-        margin-top: 2.1vw;
-        @include text-style;
-        width: 40vw;
-      }
-
-      .install-list {
-        margin-top: 4.4vw;
-        margin-bottom: 4.9vw;
-        height: 33.1vw;
-        @include full-list-style;
-      }
-    }
-
-    .after-install {
-      display: flex;
-      flex-direction: column;
-      background: $section-bckg-color;
-
-      &__header {
-        margin-top: 4.2vw;
-        @include header-style;
-      }
-
-      &__desc {
-        margin-top: 1.6vw;
-        width: 47vw;
-        @include text-style;
-      }
-
-      .step-list {
-        margin-top: 3.9vw;
-        margin-left: $inner-content-margin;
-        margin-bottom: 4.5vw;
-        padding-left: 10px;
-        height: 35.4vw;
-        display: flex;
+      @include mobile-section-inner-style(html-install, header);
+      .html-install {
         flex-direction: column;
-        justify-content: space-between;
-
-        &__item {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-
-          &__image-block {
-            width: 74px;
-            height: 74px;
-            margin-right: 2.2vw;
-            border-radius: 50%;
-            background: $button-green-color;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .icon-01 {
-              width: 34px;
-              height: 25px;
-              margin: auto;
-              fill: #fff;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &__header {
+          max-height: 110px;
+        }
+        .install-list {
+          padding: 0 12px;
+          &__item {
+            max-width: 296px;
+            &__reference {
+              margin-left: 11px;
+              font-size: 1em;
             }
-
-            .icon-02 {
-              width: 29px;
-              height: 23px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-03 {
-              width: 36px;
-              height: 36px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-04 {
-              width: 40px;
-              height: 26px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-05 {
-              width: 32px;
-              height: 37px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-06 {
-              width: 32px;
-              height: 29px;
-              margin: auto;
-              fill: #fff;
+            &__desc {
+              font-size: 0.875em;
             }
           }
-
-          &__header {
-            margin-right: 10px;
-            font-size: 1.5em;
-            color: $header-color;
-          }
-
-          &__desc {
-            padding-top: 0.2em;
-            font-size: 1.125em;
-            color: $header-color;
+          &__item::before {
+            margin-left: -19px;
+            height: 4px;
+            width: 4px;
           }
         }
       }
-
-      &__button-wrapper {
-        margin-bottom: 2.2vw;
-        @include button-wrapper-style;
-
-        .button--all-features {
-          margin: 0 10px 2vw;
-          color: #fff;
-          background: $button-green-color;
-          @include button-style;
+      @include mobile-section-inner-style(dashboard-install, header, desc);
+      .dashboard-install {
+        &__header {
+          font-size: 2.5em;
         }
+        &__desc {
+        }
+        .install-list {
+          padding: 0 12px;
+          min-height: 680px;
+          &__item {
+            max-width: 296px;
+            &__reference {
+              margin-left: 11px;
+              font-size: 1em;
+            }
+            &__desc {
+              font-size: 0.875em;
+            }
+          }
+        }
+      }
+      @include mobile-section-inner-style(after-install, header, desc);
+      .after-install {
+        .step-list {
+         margin-top: 10.1vw;
+         margin-left: 0;
+         margin-bottom: 0;
+         padding: 0 12px;
+         height: 109.6vw;
 
-        .button--test-free {
-          margin: 0 10px 2vw;
-          color: #fff;
-          background: $header-color;
-          @include button-style;
+         &__item {
+           align-items: baseline;
+           &__image-block {
+             width: 34px;
+             height: 34px;
+             margin-right: 2.2vw;
+             background: $button-green-color;
+
+             .icon-01 {
+               width: 16.3px;
+               height: 12px;
+             }
+
+             .icon-02 {
+               width: 13.3px;
+               height: 10.7px;
+             }
+
+             .icon-03 {
+               width: 16.7px;
+               height: 16.7px;
+             }
+
+             .icon-04 {
+               width: 18.7px;
+               height: 12px;
+             }
+
+             .icon-05 {
+               width: 14.7px;
+               height: 17px;
+             }
+
+             .icon-06 {
+               width: 15px;
+               height: 13.3px;
+             }
+           }
+           &__desc {
+             padding-right: 0;
+             font-size: 0.875em;
+           }
+         }
+        }
+      }
+      @include mobile-section-inner-style(other-channels, desc);
+      .other-channels {
+        .channels-list {
+          padding: 0 12px;
+          &__item {
+            align-items: center;
+            &__image-block {
+              width: 33px;
+              height: 33px;
+              .icon {
+                width: 33px;
+                height: 33px;
+              }
+            }
+            &__reference {
+              font-size: 1em;
+            }
+          }
         }
       }
     }
-    .other-channels {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      &__desc {
-        @include text-style;
-        margin-top: 4vw;
-        margin-bottom: 4.5vw;
-        width: 40vw;
-        color: $header-color;
-        font-size: 1.125em;
-      }
-      .channels-list {
-        height: 210px;
-        margin: 0 calc(#{$inner-content-margin} + 10px) 4.5vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: space-between;
-        align-content: space-between;
-        flex-wrap: wrap;
-        &__item {
-          margin-left: 4px;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          flex-basis: 290px;
-          &__image-block {
-            width: 40px;
-            height: 40px;
-            .icon {
-              width: 40px;
-              height: 40px;
-            }
-            .icon--social-networks {
-              .st0 {
-                fill: #3B4269;
-              }
-            }
-            .icon--messengers {
-              .st0 {
-                clip-path: url(#SVGID_2_);
-                fill: #3DD3A1;
-              }
-
-              .st1 {
-                fill: #FFFFFF;
-              }
-            }
-            .icon--chatbots {
-              .st0 {
-                fill:#33AFD1;
-              }
-              .st1 {
-                fill:#FFFFFF;
-              }
-            }
-            .icon--feedback {
-              .st0 {
-                fill:#DAB81A;
-              }
-            }
-            .icon--yandexd {
-              .st0 {
-                fill:url(#Combined-Shape_1_);
-              }
-            }
-            .icon--mobile-chat {
-              .st0 {
-                clip-path:url(#SVGID_2_);
-                fill:#88BC17;
-              }
-              .st1 {
-                fill:#FFFFFF;
-              }
-            }
-            .icon--email {
-              .st0 {
-                fill:#5F98D1;
-              }
-              .st1 {
-                fill:#FFFFFF;
-              }
-            }
-          }
-          &__reference {
-            height: 21px;
-            margin-left: calc(1.7vw - 1px);
-            @include small-reference-style;
-          }
-          &__reference--mobile-chat {
-            border: 0;
-            &--first-line {
-                border-bottom: 2px solid $reference-color;
-            }
-            &--second-line {
-                border-bottom: 2px solid $reference-color;
-            }
-          }
-
-        }
-      }
-    } */
-  /* } */
+  }
 }

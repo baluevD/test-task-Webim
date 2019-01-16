@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic");
 * {
   padding: 0;
   margin: 0;
@@ -38,8 +37,13 @@ ul {
   list-style: none;
 }
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic,cyrillic-ext");
+}
+
 body {
-  font-family: Ubuntu, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body .header {
@@ -127,14 +131,16 @@ body .main-content .webim-install__desc {
   width: 39vw;
   min-width: 540px;
   color: #74757b;
+  padding-bottom: 0;
 }
 
-body .main-content .webim-install__desc .mobile--first {
+body .main-content .webim-install__desc .mobile {
   display: none;
 }
 
-body .main-content .webim-install__desc .mobile--third {
-  display: none;
+body .main-content .webim-install__desc--second {
+  margin-top: 0;
+  padding-bottom: 10px;
 }
 
 body .main-content .webim-install__button-wrapper {
@@ -182,6 +188,10 @@ body .main-content .easy-install__header {
   color: #393e6b;
   font-size: 2.25em;
   text-transform: uppercase;
+}
+
+body .main-content .easy-install__header .mobile {
+  display: none;
 }
 
 body .main-content .easy-install__desc {
@@ -273,6 +283,10 @@ body .main-content .html-install__header {
   text-transform: uppercase;
 }
 
+body .main-content .html-install__header .mobile {
+  display: none;
+}
+
 body .main-content .html-install .install-list {
   margin-top: 4.2vw;
   margin-bottom: 5.1vw;
@@ -293,10 +307,18 @@ body .main-content .html-install .install-list__item__reference {
   margin-left: -1px;
 }
 
+body .main-content .html-install .install-list__item__reference .mobile {
+  display: none;
+}
+
 body .main-content .html-install .install-list__item__desc {
   margin-top: 1vw;
   margin-left: 27px;
   color: #74757b;
+}
+
+body .main-content .html-install .install-list__item__desc .mobile {
+  display: none;
 }
 
 body .main-content .html-install .install-list__item::before {
@@ -307,6 +329,10 @@ body .main-content .html-install .install-list__item::before {
   background: #3b4269;
   display: inline-block;
   margin: 3px 30px 3px -15px;
+}
+
+body .main-content .html-install .install-list .mobile {
+  display: none;
 }
 
 body .main-content .dashboard-install {
@@ -353,10 +379,18 @@ body .main-content .dashboard-install .install-list__item__reference {
   margin-left: -1px;
 }
 
+body .main-content .dashboard-install .install-list__item__reference .mobile {
+  display: none;
+}
+
 body .main-content .dashboard-install .install-list__item__desc {
   margin-top: 1vw;
   margin-left: 27px;
   color: #74757b;
+}
+
+body .main-content .dashboard-install .install-list__item__desc .mobile {
+  display: none;
 }
 
 body .main-content .dashboard-install .install-list__item::before {
@@ -474,6 +508,10 @@ body .main-content .after-install .step-list__item__desc {
   padding-top: 0.2em;
   font-size: 1.125em;
   color: #393e6b;
+}
+
+body .main-content .after-install .step-list__item__desc .mobile-step-header {
+  display: none;
 }
 
 body .main-content .after-install__button-wrapper {
@@ -636,6 +674,7 @@ body .rights-contacts .rights-wrapper {
 }
 
 body .rights-contacts .rights-wrapper .logo-wrapper {
+  display: block;
   width: 146px;
   margin-bottom: 25px;
 }
@@ -653,6 +692,7 @@ body .rights-contacts .rights-wrapper .desc__line {
 }
 
 body .rights-contacts .contacts-tel-wrapper {
+  display: block;
   margin-left: 11.3vw;
   margin-right: 10px;
   min-height: 140px;
@@ -660,7 +700,6 @@ body .rights-contacts .contacts-tel-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  /* width: 300px; */
 }
 
 body .rights-contacts .contacts-tel-wrapper .tel-list {
@@ -714,6 +753,7 @@ body .rights-contacts .contacts-tel-wrapper .tel-list__item__desc {
 }
 
 body .rights-contacts .contacts-email-wrapper {
+  display: block;
   margin-left: auto;
   min-height: 140px;
   height: 9.6vw;
@@ -761,11 +801,10 @@ body .rights-contacts .contacts-email-wrapper .icons-container .icon-skype {
 }
 
 body .fixed-icon {
+  display: block;
   right: 35px;
   bottom: 23px;
-  /* position: -webkit-sticky; */
   position: fixed;
-  /* position: sticky; */
 }
 
 body .fixed-icon .icon-wrapper {
@@ -886,7 +925,6 @@ body .fixed-icon .icon-wrapper .icon {
     margin-top: calc(12.3vw - 7px);
     margin-left: 0;
     padding-left: 0;
-    /* margin-top: 40px; */
     color: #393e6b;
     font-size: 3em;
     text-transform: uppercase;
@@ -900,11 +938,13 @@ body .fixed-icon .icon-wrapper .icon {
     font-size: 1.625em;
     color: #74757b;
     flex-basis: 616px;
+    padding-right: 16vw;
   }
-  body .main-content .webim-install__desc .mobile--first {
-    display: block;
+  body .main-content .webim-install__desc--second {
+    margin-top: 0;
+    padding-right: 8vw;
   }
-  body .main-content .webim-install__desc .mobile--third {
+  body .main-content .webim-install__desc--second .mobile {
     display: block;
   }
   body .main-content .webim-install__button-wrapper {
@@ -921,7 +961,6 @@ body .fixed-icon .icon-wrapper .icon {
     margin: 0 10px 4.2vw;
     color: #fff;
     background: #2cd3b8;
-    /* min-width: 256px; */
     height: 90px;
     border-radius: 45px;
     text-transform: uppercase;
@@ -929,337 +968,622 @@ body .fixed-icon .icon-wrapper .icon {
     padding: 0;
   }
   body .main-content .webim-install__button-wrapper .button--rate {
-    margin: 0 10px 4.2vw;
+    margin: 0 10px 0;
     color: #393e6b;
     border: 1px solid #393e6b;
-    /* min-width: 256px; */
     height: 90px;
     border-radius: 45px;
     text-transform: uppercase;
     font-size: 1.5em;
     padding: 0;
   }
-  /* .easy-install {
-      display: flex;
-      flex-direction: column;
+  body .main-content .easy-install {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body .main-content .easy-install__header {
+    margin-top: 12.8vw;
+    margin-left: 0;
+    padding-left: 0;
+    color: #393e6b;
+    font-size: 3em;
+    text-transform: uppercase;
+    flex-basis: 616px;
+    padding-right: 16vw;
+  }
+  body .main-content .easy-install__desc {
+    margin-top: 7.7vw;
+    margin-left: 0;
+    padding: 0;
+    min-width: 0;
+    font-size: 1.625em;
+    color: #74757b;
+    flex-basis: 616px;
+    padding-right: 16vw;
+  }
+  body .main-content .easy-install__steps-wrapper {
+    margin: 12.8vw 0 11.5vw;
+    justify-content: flex-start;
+    flex-basis: 616px;
+  }
+  body .main-content .easy-install__steps-wrapper .registration {
+    margin-left: 4.8vw;
+    margin-right: 26.4vw;
+    padding-left: 0;
+    width: 118px;
+  }
+  body .main-content .easy-install__steps-wrapper .registration__small-reference {
+    margin-top: 3.7vw;
+  }
+  body .main-content .easy-install__steps-wrapper .registration__small-reference--registration {
+    padding: 0 1px;
+    color: #0da088;
+    font-size: 1.625em;
+    text-decoration: none;
+    border-bottom: 2px solid #0da088;
+  }
+  body .main-content .easy-install__steps-wrapper .registration:before {
+    content: "1";
+    display: block;
+    margin-bottom: -83px;
+    margin-left: -43px;
+    font-weight: bold;
+    font-size: 8em;
+    color: #e9e9ed;
+  }
+  body .main-content .easy-install__steps-wrapper .html-setup {
+    padding-left: 0;
+    width: 194px;
+  }
+  body .main-content .easy-install__steps-wrapper .html-setup__small-reference {
+    margin-top: 3.7vw;
+  }
+  body .main-content .easy-install__steps-wrapper .html-setup__small-reference--setup {
+    padding: 0 1px;
+    color: #0da088;
+    font-size: 1.625em;
+    text-decoration: none;
+    border-bottom: 2px solid #0da088;
+  }
+  body .main-content .easy-install__steps-wrapper .html-setup:before {
+    content: "2";
+    display: block;
+    margin-bottom: -83px;
+    margin-left: -43px;
+    font-weight: bold;
+    font-size: 8em;
+    color: #e9e9ed;
+  }
+  body .main-content .html-install {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body .main-content .html-install__header {
+    margin-top: 11.9vw;
+    margin-left: 0;
+    padding-left: 0;
+    color: #393e6b;
+    font-size: 3em;
+    text-transform: uppercase;
+    flex-basis: 616px;
+    padding-right: 24vw;
+  }
+  body .main-content .html-install .install-list {
+    margin-top: 8.7vw;
+    margin-bottom: 13.4vw;
+    height: 144.5vw;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 37px;
+    flex-basis: 616px;
+  }
+  body .main-content .html-install .install-list__item {
+    padding-right: 8vw;
+  }
+  body .main-content .html-install .install-list__item__reference {
+    padding: 0 1px;
+    color: #0da088;
+    font-size: 1.875em;
+    text-decoration: none;
+    border-bottom: 2px solid #0da088;
+    margin-left: 22px;
+  }
+  body .main-content .html-install .install-list__item__reference .mobile {
+    display: block;
+  }
+  body .main-content .html-install .install-list__item__desc {
+    margin-top: 4.8vw;
+    margin-left: 0;
+    color: #74757b;
+    font-size: 1.5em;
+  }
+  body .main-content .html-install .install-list__item__desc .mobile {
+    display: block;
+  }
+  body .main-content .html-install .install-list__item::before {
+    content: "\A";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #3b4269;
+    display: inline-block;
+    margin: 0 0 5px -37px;
+  }
+  body .main-content .dashboard-install {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body .main-content .dashboard-install__header {
+    margin-top: 12.2vw;
+    margin-left: 0;
+    padding-left: 0;
+    color: #393e6b;
+    font-size: 3em;
+    text-transform: uppercase;
+    flex-basis: 616px;
+  }
+  body .main-content .dashboard-install__desc {
+    margin-top: 7.7vw;
+    margin-left: 0;
+    padding: 0;
+    min-width: 0;
+    font-size: 1.625em;
+    color: #74757b;
+    flex-basis: 616px;
+  }
+  body .main-content .dashboard-install .install-list {
+    margin-top: 12vw;
+    margin-bottom: 11.3vw;
+    height: 172vw;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 37px;
+    flex-basis: 616px;
+  }
+  body .main-content .dashboard-install .install-list__item {
+    padding-right: 8vw;
+  }
+  body .main-content .dashboard-install .install-list__item__reference {
+    padding: 0 1px;
+    color: #0da088;
+    font-size: 1.875em;
+    text-decoration: none;
+    border-bottom: 2px solid #0da088;
+    margin-left: 22px;
+  }
+  body .main-content .dashboard-install .install-list__item__reference .mobile {
+    display: block;
+  }
+  body .main-content .dashboard-install .install-list__item__desc {
+    margin-top: 4.8vw;
+    margin-left: 0;
+    color: #74757b;
+    font-size: 1.5em;
+  }
+  body .main-content .dashboard-install .install-list__item__desc .mobile {
+    display: block;
+  }
+  body .main-content .dashboard-install .install-list__item::before {
+    content: "\A";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #3b4269;
+    display: inline-block;
+    margin: 0 0 5px -37px;
+  }
+  body .main-content .dashboard-install .install-list__item {
+    padding-right: 2vw;
+  }
+  body .main-content .after-install {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body .main-content .after-install__header {
+    margin-top: 11.5vw;
+    margin-left: 19.1vw;
+    padding-left: 10px;
+    color: #393e6b;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    margin-left: 0;
+    padding-left: 0;
+    color: #393e6b;
+    font-size: 3em;
+    text-transform: uppercase;
+    flex-basis: 616px;
+  }
+  body .main-content .after-install__desc {
+    margin-top: 7.4vw;
+    margin-left: 0;
+    padding: 0;
+    min-width: 0;
+    font-size: 1.625em;
+    color: #74757b;
+    flex-basis: 616px;
+  }
+  body .main-content .after-install .step-list {
+    margin-top: 10.1vw;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    height: 109.6vw;
+    flex-basis: 616px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body .main-content .after-install .step-list__item__image-block {
+    width: 102px;
+    height: 102px;
+    margin-right: 2.2vw;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-01 {
+    width: 49px;
+    height: 36px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-02 {
+    width: 40px;
+    height: 32px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-03 {
+    width: 50px;
+    height: 50px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-04 {
+    width: 56px;
+    height: 36px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-05 {
+    width: 44px;
+    height: 51px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-06 {
+    width: 45px;
+    height: 40px;
+  }
+  body .main-content .after-install .step-list__item__header {
+    display: none;
+  }
+  body .main-content .after-install .step-list__item__desc {
+    padding-top: 0.2em;
+    font-size: 1.5em;
+    color: #393e6b;
+    width: 61.4vw;
+  }
+  body .main-content .after-install .step-list__item__desc .mobile-step-header {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  body .main-content .after-install__button-wrapper {
+    margin-top: 13.1vw;
+    margin-bottom: 13.1vw;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 616px;
+  }
+  body .main-content .after-install__button-wrapper .button--all-features {
+    margin: 0 10px 4.2vw;
+    color: #fff;
+    background: #2cd3b8;
+    height: 90px;
+    border-radius: 45px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  body .main-content .after-install__button-wrapper .button--test-free {
+    margin: 0 10px 0;
+    color: #fff;
+    background: #393e6b;
+    height: 90px;
+    border-radius: 45px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  body .main-content .other-channels {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body .main-content .other-channels__desc {
+    margin-left: 0;
+    padding: 0;
+    min-width: 0;
+    font-size: 1.625em;
+    color: #74757b;
+    flex-basis: 616px;
+    margin-top: 12.1vw;
+    margin-bottom: 10.6vw;
+    padding-right: 8vw;
+    color: #393e6b;
+    font-size: 1.5em;
+  }
+  body .main-content .other-channels .channels-list {
+    flex-basis: 616px;
+    height: 100vw;
+    margin: 0 0 14.2vw 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  body .main-content .other-channels .channels-list__item {
+    margin-left: 0;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  body .main-content .other-channels .channels-list__item__image-block {
+    width: 67px;
+    height: 67px;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon {
+    width: 67px;
+    height: 67px;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--social-networks .st0 {
+    fill: #3B4269;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--messengers .st0 {
+    clip-path: url(#SVGID_2_);
+    fill: #3DD3A1;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--messengers .st1 {
+    fill: #FFFFFF;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--chatbots .st0 {
+    fill: #33AFD1;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--chatbots .st1 {
+    fill: #FFFFFF;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--feedback .st0 {
+    fill: #DAB81A;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--yandexd .st0 {
+    fill: url(#Combined-Shape_1_);
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--mobile-chat .st0 {
+    clip-path: url(#SVGID_2_);
+    fill: #88BC17;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--mobile-chat .st1 {
+    fill: #FFFFFF;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--email .st0 {
+    fill: #5F98D1;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon--email .st1 {
+    fill: #FFFFFF;
+  }
+  body .main-content .other-channels .channels-list__item__reference {
+    height: 1.2em;
+    margin-left: calc(1.7vw - 1px);
+    padding: 0 1px;
+    color: #0da088;
+    font-size: 1.625em;
+    text-decoration: none;
+    border-bottom: 2px solid #0da088;
+    font-size: 1.5em;
+  }
+  body .main-content .other-channels .channels-list__item__reference--mobile-chat {
+    border: 0;
+  }
+  body .main-content .other-channels .channels-list__item__reference--mobile-chat--first-line {
+    border-bottom: 2px solid #0da088;
+  }
+  body .main-content .other-channels .channels-list__item__reference--mobile-chat--second-line {
+    border-bottom: 2px solid #0da088;
+  }
+  body .main-content .other-channels .channels-list__item--first {
+    order: 1;
+  }
+  body .main-content .other-channels .channels-list__item--second {
+    order: 4;
+  }
+  body .main-content .other-channels .channels-list__item--third {
+    order: 6;
+  }
+  body .main-content .other-channels .channels-list__item--fourth {
+    order: 2;
+  }
+  body .main-content .other-channels .channels-list__item--fifth {
+    order: 5;
+  }
+  body .main-content .other-channels .channels-list__item--sixth {
+    order: 7;
+  }
+  body .main-content .other-channels .channels-list__item--seventh {
+    order: 3;
+  }
+  body .rights-contacts {
+    height: 22.1vw;
+    padding: 0 10.1vw;
+    background: #393e6b;
+    align-items: center;
+  }
+  body .rights-contacts .rights-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .rights-contacts .rights-wrapper .logo-wrapper {
+    display: none;
+  }
+  body .rights-contacts .rights-wrapper .desc {
+    color: #fff;
+  }
+  body .rights-contacts .rights-wrapper .desc__line {
+    font-size: 1.5em;
+  }
+  body .rights-contacts .contacts-tel-wrapper {
+    display: none;
+  }
+  body .rights-contacts .contacts-email-wrapper {
+    display: none;
+  }
+  body .fixed-icon {
+    display: none;
+  }
+}
 
-      &__header {
-        margin-top: 4.3vw;
-        @include header-style;
-      }
-
-      &__desc {
-        margin-top: 1.6vw;
-        @include text-style;
-      }
-
-      &__steps-wrapper {
-        margin-top: 1.9vw;
-        margin-bottom: 5.2vw;
-        margin-left: $inner-content-margin;
-        display: flex;
-        justify-content: flex-start;
-
-        .registration {
-          margin-right: 8.1vw;
-          padding-left: 10px;
-          width: 118px;
-
-          &__small-reference {
-            margin-top: 41px;
-
-            &--registration {
-              @include small-reference-style;
-            }
-          }
-        }
-
-        .registration:before {
-          content: "1";
-          @include big-numbers-style;
-        }
-
-        .html-setup {
-          padding-left: 10px;
-          width: 194px;
-
-          &__small-reference {
-            margin-top: 41px;
-
-            &--setup {
-              @include small-reference-style;
-            }
-          }
-        }
-
-        .html-setup:before {
-          content: "2";
-          @include big-numbers-style;
-        }
-      }
-    }
-
-    .html-install {
-      min-width: 521px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      background: $section-bckg-color;
-
-      &__header {
-        margin-top: 5vw;
-        @include header-style;
-      }
-
-      .install-list {
-        margin-top: 4.2vw;
-        margin-bottom: 5.1vw;
-        height: 30.1vw;
-        @include full-list-style;
-      }
-    }
-
-    .dashboard-install {
-      display: flex;
-      flex-direction: column;
-
-      &__header {
-        margin-top: 4.7vw;
-        @include header-style;
-      }
-
-      &__desc {
-        margin-top: 2.1vw;
-        @include text-style;
-        width: 40vw;
-      }
-
-      .install-list {
-        margin-top: 4.4vw;
-        margin-bottom: 4.9vw;
-        height: 33.1vw;
-        @include full-list-style;
-      }
-    }
-
-    .after-install {
-      display: flex;
-      flex-direction: column;
-      background: $section-bckg-color;
-
-      &__header {
-        margin-top: 4.2vw;
-        @include header-style;
-      }
-
-      &__desc {
-        margin-top: 1.6vw;
-        width: 47vw;
-        @include text-style;
-      }
-
-      .step-list {
-        margin-top: 3.9vw;
-        margin-left: $inner-content-margin;
-        margin-bottom: 4.5vw;
-        padding-left: 10px;
-        height: 35.4vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &__item {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-
-          &__image-block {
-            width: 74px;
-            height: 74px;
-            margin-right: 2.2vw;
-            border-radius: 50%;
-            background: $button-green-color;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .icon-01 {
-              width: 34px;
-              height: 25px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-02 {
-              width: 29px;
-              height: 23px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-03 {
-              width: 36px;
-              height: 36px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-04 {
-              width: 40px;
-              height: 26px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-05 {
-              width: 32px;
-              height: 37px;
-              margin: auto;
-              fill: #fff;
-            }
-
-            .icon-06 {
-              width: 32px;
-              height: 29px;
-              margin: auto;
-              fill: #fff;
-            }
-          }
-
-          &__header {
-            margin-right: 10px;
-            font-size: 1.5em;
-            color: $header-color;
-          }
-
-          &__desc {
-            padding-top: 0.2em;
-            font-size: 1.125em;
-            color: $header-color;
-          }
-        }
-      }
-
-      &__button-wrapper {
-        margin-bottom: 2.2vw;
-        @include button-wrapper-style;
-
-        .button--all-features {
-          margin: 0 10px 2vw;
-          color: #fff;
-          background: $button-green-color;
-          @include button-style;
-        }
-
-        .button--test-free {
-          margin: 0 10px 2vw;
-          color: #fff;
-          background: $header-color;
-          @include button-style;
-        }
-      }
-    }
-    .other-channels {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      &__desc {
-        @include text-style;
-        margin-top: 4vw;
-        margin-bottom: 4.5vw;
-        width: 40vw;
-        color: $header-color;
-        font-size: 1.125em;
-      }
-      .channels-list {
-        height: 210px;
-        margin: 0 calc(19.1vw + 10px) 4.5vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: space-between;
-        align-content: space-between;
-        flex-wrap: wrap;
-        &__item {
-          margin-left: 4px;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          flex-basis: 290px;
-          &__image-block {
-            width: 40px;
-            height: 40px;
-            .icon {
-              width: 40px;
-              height: 40px;
-            }
-            .icon--social-networks {
-              .st0 {
-                fill: #3B4269;
-              }
-            }
-            .icon--messengers {
-              .st0 {
-                clip-path: url(#SVGID_2_);
-                fill: #3DD3A1;
-              }
-
-              .st1 {
-                fill: #FFFFFF;
-              }
-            }
-            .icon--chatbots {
-              .st0 {
-                fill:#33AFD1;
-              }
-              .st1 {
-                fill:#FFFFFF;
-              }
-            }
-            .icon--feedback {
-              .st0 {
-                fill:#DAB81A;
-              }
-            }
-            .icon--yandexd {
-              .st0 {
-                fill:url(#Combined-Shape_1_);
-              }
-            }
-            .icon--mobile-chat {
-              .st0 {
-                clip-path:url(#SVGID_2_);
-                fill:#88BC17;
-              }
-              .st1 {
-                fill:#FFFFFF;
-              }
-            }
-            .icon--email {
-              .st0 {
-                fill:#5F98D1;
-              }
-              .st1 {
-                fill:#FFFFFF;
-              }
-            }
-          }
-          &__reference {
-            height: 21px;
-            margin-left: calc(1.7vw - 1px);
-            @include small-reference-style;
-          }
-          &__reference--mobile-chat {
-            border: 0;
-            &--first-line {
-                border-bottom: 2px solid $reference-color;
-            }
-            &--second-line {
-                border-bottom: 2px solid $reference-color;
-            }
-          }
-
-        }
-      }
-    } */
-  /* } */
+@media (min-width: 320px) and (max-width: 640px) {
+  body .main-content .webim-install__header {
+    padding: 0 12px;
+  }
+  body .main-content .webim-install__desc {
+    padding: 0 12px;
+  }
+  body .main-content .easy-install__header {
+    padding: 0 12px;
+  }
+  body .main-content .easy-install__desc {
+    padding: 0 12px;
+  }
+  body .main-content .easy-install__steps-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .main-content .easy-install__steps-wrapper .registration {
+    margin-left: 50px;
+    margin-right: auto;
+  }
+  body .main-content .easy-install__steps-wrapper .html-setup {
+    margin-left: 50px;
+    margin-right: auto;
+  }
+  body .main-content .html-install__header {
+    padding: 0 12px;
+  }
+  body .main-content .html-install {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  body .main-content .html-install__header {
+    max-height: 110px;
+  }
+  body .main-content .html-install .install-list {
+    padding: 0 12px;
+  }
+  body .main-content .html-install .install-list__item {
+    max-width: 296px;
+  }
+  body .main-content .html-install .install-list__item__reference {
+    margin-left: 11px;
+    font-size: 1em;
+  }
+  body .main-content .html-install .install-list__item__desc {
+    font-size: 0.875em;
+  }
+  body .main-content .html-install .install-list__item::before {
+    margin-left: -19px;
+    height: 4px;
+    width: 4px;
+  }
+  body .main-content .dashboard-install__header {
+    padding: 0 12px;
+  }
+  body .main-content .dashboard-install__desc {
+    padding: 0 12px;
+  }
+  body .main-content .dashboard-install__header {
+    font-size: 2.5em;
+  }
+  body .main-content .dashboard-install .install-list {
+    padding: 0 12px;
+    min-height: 680px;
+  }
+  body .main-content .dashboard-install .install-list__item {
+    max-width: 296px;
+  }
+  body .main-content .dashboard-install .install-list__item__reference {
+    margin-left: 11px;
+    font-size: 1em;
+  }
+  body .main-content .dashboard-install .install-list__item__desc {
+    font-size: 0.875em;
+  }
+  body .main-content .after-install__header {
+    padding: 0 12px;
+  }
+  body .main-content .after-install__desc {
+    padding: 0 12px;
+  }
+  body .main-content .after-install .step-list {
+    margin-top: 10.1vw;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0 12px;
+    height: 109.6vw;
+  }
+  body .main-content .after-install .step-list__item {
+    align-items: baseline;
+  }
+  body .main-content .after-install .step-list__item__image-block {
+    width: 34px;
+    height: 34px;
+    margin-right: 2.2vw;
+    background: #2cd3b8;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-01 {
+    width: 16.3px;
+    height: 12px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-02 {
+    width: 13.3px;
+    height: 10.7px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-03 {
+    width: 16.7px;
+    height: 16.7px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-04 {
+    width: 18.7px;
+    height: 12px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-05 {
+    width: 14.7px;
+    height: 17px;
+  }
+  body .main-content .after-install .step-list__item__image-block .icon-06 {
+    width: 15px;
+    height: 13.3px;
+  }
+  body .main-content .after-install .step-list__item__desc {
+    padding-right: 0;
+    font-size: 0.875em;
+  }
+  body .main-content .other-channels__desc {
+    padding: 0 12px;
+  }
+  body .main-content .other-channels .channels-list {
+    padding: 0 12px;
+  }
+  body .main-content .other-channels .channels-list__item {
+    align-items: center;
+  }
+  body .main-content .other-channels .channels-list__item__image-block {
+    width: 33px;
+    height: 33px;
+  }
+  body .main-content .other-channels .channels-list__item__image-block .icon {
+    width: 33px;
+    height: 33px;
+  }
+  body .main-content .other-channels .channels-list__item__reference {
+    font-size: 1em;
+  }
 }

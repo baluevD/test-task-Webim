@@ -6,10 +6,14 @@
   text-transform: uppercase;
 }
 
+@mixin mobile-section-flex {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 @mixin mobile-header-style {
   margin-left: 0;
   padding-left: 0;
-  /* margin-top: 40px; */
   color: $header-color;
   font-size: 3em;
   text-transform: uppercase;
@@ -35,13 +39,64 @@
 }
 
 @mixin mobile-button-style {
-  /* min-width: 256px; */
   height: 90px;
   border-radius: 45px;
   text-transform: uppercase;
   font-size:1.5em;
   padding: 0;
 }
+
+@mixin mobile-small-reference-style {
+  padding: 0 1px;
+  color: $reference-color;
+  font-size: 1.625em;
+  text-decoration: none;
+  border-bottom: 2px solid $reference-color;
+}
+@mixin mobile-list-reference-style {
+  padding: 0 1px;
+  color: $reference-color;
+  font-size: 1.875em;
+  text-decoration: none;
+  border-bottom: 2px solid $reference-color;
+}
+
+@mixin mobile-full-list-style {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 37px;
+  &__item {
+    padding-right: 8vw;
+    &__reference {
+      @include mobile-list-reference-style;
+      margin-left: 22px;
+      .mobile {
+        display: block;
+      }
+    }
+    &__desc {
+      margin-top: 4.8vw;
+      margin-left: 0;
+      color: $text-color;
+      font-size: 1.5em;
+      .mobile {
+        display: block;
+      }
+    }
+  }
+  &__item::before {
+    content:"\A";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: $dot-list-color;
+    display: inline-block;
+    margin: 0 0 5px -37px;
+  }
+}
+
 
 @mixin button-style {
   min-width: 256px;
@@ -95,11 +150,17 @@
     &__reference {
       @include list-reference-style;
       margin-left: -1px;
+      .mobile {
+        display: none;
+      }
     }
     &__desc {
       margin-top: 1vw;
       margin-left: 27px;
       color: $text-color;
+      .mobile {
+        display: none;
+      }
     }
   }
   &__item::before {
@@ -124,6 +185,14 @@
   @each $i in $parts {
     .#{$section}__#{nth($i, 1)} {
         margin-left: 10vw;
+    }
+  }
+}
+
+@mixin mobile-section-inner-style($section,  $parts...) {
+  @each $i in $parts {
+    .#{$section}__#{nth($i, 1)} {
+        padding: 0 12px;
     }
   }
 }
