@@ -5,17 +5,16 @@
   font-size: 2.25em;
   text-transform: uppercase;
 }
-
 @mixin mobile-section-flex {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 @mixin mobile-header-style {
   margin-left: 0;
@@ -26,9 +25,8 @@
 }
 @mixin mobile-all-block-basis {
   -ms-flex-preferred-size: 616px;
-      flex-basis: 616px;
+  flex-basis: 616px;
 }
-
 @mixin mobile-text-style {
   margin-left: 0;
   padding: 0;
@@ -36,7 +34,6 @@
   font-size: 1.625em;
   color: $text-color;
 }
-
 @mixin mobile-button-wrapper-style {
   margin-left: 0;
   display: -webkit-box;
@@ -44,23 +41,21 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 @mixin mobile-button-style {
   height: 90px;
   border-radius: 45px;
   text-transform: uppercase;
-  font-size:1.5em;
+  font-size: 1.5em;
   padding: 0;
 }
-
 @mixin mobile-small-reference-style {
   padding: 0 1px;
   color: $reference-color;
@@ -75,7 +70,6 @@
   text-decoration: none;
   border-bottom: 2px solid $reference-color;
 }
-
 @mixin mobile-full-list-style {
   margin-left: 0;
   display: -webkit-box;
@@ -83,33 +77,39 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-left: 37px;
+
   &__item {
     padding-right: 8vw;
+
     &__reference {
       @include mobile-list-reference-style;
       margin-left: 22px;
+
       .mobile {
         display: block;
       }
     }
+
     &__desc {
       margin-top: 4.8vw;
       margin-left: 0;
       color: $text-color;
       font-size: 1.5em;
+
       .mobile {
         display: block;
       }
     }
   }
+
   &__item::before {
-    content:"\A";
+    content: "\A";
     width: 11px;
     height: 11px;
     border-radius: 50%;
@@ -118,25 +118,21 @@
     margin: 0 0 5px -37px;
   }
 }
-
-
 @mixin button-style {
   min-width: 256px;
   height: 48px;
   border-radius: 24px;
   text-transform: uppercase;
-  font-size:0.9em;
+  font-size: 0.9em;
   padding: 16px 20px;
 }
-
 @mixin text-style {
   margin-left: $inner-content-margin;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px;
   width: 39vw;
   min-width: 540px;
   color: $text-color;
 }
-
 @mixin small-reference-style {
   padding: 0 1px;
   color: $reference-color;
@@ -144,7 +140,6 @@
   text-decoration: none;
   border-bottom: 2px solid $reference-color;
 }
-
 @mixin big-numbers-style {
   display: block;
   margin-bottom: -83px;
@@ -153,7 +148,6 @@
   font-size: 8em;
   color: $big-numbers-color;
 }
-
 @mixin list-reference-style {
   padding: 0 1px;
   height: 25px;
@@ -162,7 +156,6 @@
   text-decoration: none;
   border-bottom: 2px solid $reference-color;
 }
-
 @mixin full-list-style {
   margin-left: calc(#{$inner-content-margin} + 26px);
   display: -webkit-box;
@@ -170,30 +163,35 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
   &__item {
     &__reference {
       @include list-reference-style;
       margin-left: -1px;
+
       .mobile {
         display: none;
       }
     }
+
     &__desc {
       margin-top: 1vw;
       margin-left: 27px;
       color: $text-color;
+
       .mobile {
         display: none;
       }
     }
   }
+
   &__item::before {
-    content:"\A";
+    content: "\A";
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -202,31 +200,28 @@
     margin: 3px 30px 3px -15px;
   }
 }
-
 @mixin button-wrapper-style {
   margin-left: $inner-content-margin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
-@mixin section-inner-style($section,  $parts...) {
+@mixin section-inner-style($section, $parts...) {
   @each $i in $parts {
     .#{$section}__#{nth($i, 1)} {
-        margin-left: 10vw;
+      margin-left: 10vw;
     }
   }
 }
-
-@mixin mobile-section-inner-style($section,  $parts...) {
+@mixin mobile-section-inner-style($section, $parts...) {
   @each $i in $parts {
     .#{$section}__#{nth($i, 1)} {
-        padding: 0 12px;
+      padding: 0 12px;
     }
   }
 }

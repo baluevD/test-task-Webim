@@ -154,7 +154,7 @@ body .main-content .webim-install__header {
 body .main-content .webim-install__desc {
   margin-top: 2.4vw;
   margin-left: 19.1vw;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px;
   width: 39vw;
   min-width: 540px;
   color: #74757b;
@@ -234,7 +234,7 @@ body .main-content .easy-install__header .mobile {
 body .main-content .easy-install__desc {
   margin-top: 1.6vw;
   margin-left: 19.1vw;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px;
   width: 39vw;
   min-width: 540px;
   color: #74757b;
@@ -412,7 +412,7 @@ body .main-content .dashboard-install__header {
 body .main-content .dashboard-install__desc {
   margin-top: 2.1vw;
   margin-left: 19.1vw;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px;
   width: 39vw;
   min-width: 540px;
   color: #74757b;
@@ -493,7 +493,7 @@ body .main-content .after-install__header {
 body .main-content .after-install__desc {
   margin-top: 1.6vw;
   margin-left: 19.1vw;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px;
   width: 39vw;
   min-width: 540px;
   color: #74757b;
@@ -661,7 +661,7 @@ body .main-content .other-channels {
 
 body .main-content .other-channels__desc {
   margin-left: 19.1vw;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px;
   width: 39vw;
   min-width: 540px;
   color: #74757b;
