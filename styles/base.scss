@@ -25,7 +25,6 @@ body {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-
       color: $header-color;
       font-size: 1.125em;
       text-transform: uppercase;
@@ -764,7 +763,6 @@ body {
     }
   }
 }
-
 @media (min-width: 751px) and (max-width: 1330px) {
   body {
     .main-content {
