@@ -52,6 +52,8 @@ body .header {
   border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.05) 50%, #eff4f4 100%) 0 0 100 0 repeat;
   border-width: 0 0 7px 0;
   border-style: solid;
+  background: url("../images/header-bckg.jpg") left no-repeat;
+  background-size: 40.9vw 100px;
 }
 
 body .header .menu-wrapper {
@@ -70,7 +72,6 @@ body .header .menu-wrapper {
 body .header .menu-wrapper .login-menu {
   padding-left: 4.1vw;
   width: 40.9vw;
-  background: url("../images/header-bckg.jpg") right top no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -977,94 +978,7 @@ body .fixed-icon .icon-wrapper .icon {
   }
 }
 
-@media (min-width: 751px) and (max-width: 992px) {
-  body .main-content .webim-install__header {
-    margin-left: 10vw;
-  }
-  body .main-content .webim-install__desc {
-    margin-left: 10vw;
-  }
-  body .main-content .webim-install__button-wrapper {
-    margin-left: 10vw;
-  }
-  body .main-content .easy-install__header {
-    margin-left: 10vw;
-  }
-  body .main-content .easy-install__desc {
-    margin-left: 10vw;
-  }
-  body .main-content .easy-install__steps-wrapper {
-    margin-left: 10vw;
-  }
-  body .main-content .html-install__header {
-    margin-left: 10vw;
-  }
-  body .main-content .dashboard-install__header {
-    margin-left: 10vw;
-  }
-  body .main-content .dashboard-install__desc {
-    margin-left: 10vw;
-  }
-  body .main-content .after-install__header {
-    margin-left: 10vw;
-  }
-  body .main-content .after-install__desc {
-    margin-left: 10vw;
-  }
-  body .main-content .after-install__button-wrapper {
-    margin-left: 10vw;
-  }
-  body .main-content .other-channels__desc {
-    margin-left: 10vw;
-  }
-  body .main-content .html-install .install-list {
-    margin-left: 13.5vw;
-    height: 496px;
-  }
-  body .main-content .dashboard-install .install-list {
-    margin-left: 13.5vw;
-    height: 568px;
-  }
-  body .main-content .after-install .step-list {
-    margin-left: 10vw;
-  }
-  body .main-content .other-channels .channels-list {
-    margin-left: 10vw;
-  }
-}
-
-@media (min-width: 751px) and (max-width: 876px) {
-  body .header .menu-wrapper {
-    font-size: 1em;
-  }
-  body .header .menu-wrapper .login-menu__item--login {
-    margin-right: 1vw;
-  }
-  body .header .menu-wrapper .section-menu__item {
-    margin-right: 1vw;
-  }
-  body .header .menu-wrapper .section-menu__item--logo {
-    margin-left: 1vw;
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 751px) and (max-width: 843px) {
-  body .main-content .other-channels .channels-list {
-    height: 447px;
-  }
-  body .main-content .other-channels .channels-list__item {
-    margin-bottom: 27px;
-  }
-}
-
-@media (min-width: 751px) and (max-width: 821px) {
-  body .rights-contacts .contacts-tel-wrapper {
-    margin-left: 30px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 750px) {
+@media (min-width: 751px) and (max-width: 1000px) {
   body .header {
     background: url("../images/logo_head.svg") no-repeat center center;
     background-size: 30.4vw 7.5vw;
@@ -1162,6 +1076,96 @@ body .fixed-icon .icon-wrapper .icon {
     padding: 10px 0;
     font-size: 1.5em;
   }
+}
+
+@media (min-width: 751px) and (max-width: 992px) {
+  body .main-content .webim-install__header {
+    margin-left: 10vw;
+  }
+  body .main-content .webim-install__desc {
+    margin-left: 10vw;
+  }
+  body .main-content .webim-install__button-wrapper {
+    margin-left: 10vw;
+  }
+  body .main-content .easy-install__header {
+    margin-left: 10vw;
+  }
+  body .main-content .easy-install__desc {
+    margin-left: 10vw;
+  }
+  body .main-content .easy-install__steps-wrapper {
+    margin-left: 10vw;
+  }
+  body .main-content .html-install__header {
+    margin-left: 10vw;
+  }
+  body .main-content .dashboard-install__header {
+    margin-left: 10vw;
+  }
+  body .main-content .dashboard-install__desc {
+    margin-left: 10vw;
+  }
+  body .main-content .after-install__header {
+    margin-left: 10vw;
+  }
+  body .main-content .after-install__desc {
+    margin-left: 10vw;
+  }
+  body .main-content .after-install__button-wrapper {
+    margin-left: 10vw;
+  }
+  body .main-content .other-channels__desc {
+    margin-left: 10vw;
+  }
+  body .main-content .html-install .install-list {
+    margin-left: 13.5vw;
+    height: 496px;
+  }
+  body .main-content .dashboard-install .install-list {
+    margin-left: 13.5vw;
+    height: 568px;
+  }
+  body .main-content .after-install .step-list {
+    margin-left: 10vw;
+  }
+  body .main-content .other-channels .channels-list {
+    margin-left: 10vw;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 876px) {
+  body .header .menu-wrapper {
+    font-size: 1em;
+  }
+  body .header .menu-wrapper .login-menu__item--login {
+    margin-right: 1vw;
+  }
+  body .header .menu-wrapper .section-menu__item {
+    margin-right: 1vw;
+  }
+  body .header .menu-wrapper .section-menu__item--logo {
+    margin-left: 1vw;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 843px) {
+  body .main-content .other-channels .channels-list {
+    height: 447px;
+  }
+  body .main-content .other-channels .channels-list__item {
+    margin-bottom: 27px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 821px) {
+  body .rights-contacts .contacts-tel-wrapper {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 750px) {
   body .main-content .webim-install {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

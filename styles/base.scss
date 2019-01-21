@@ -14,6 +14,8 @@ body {
     border-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 50%, $section-bckg-color 100%) 0 0 100 0 repeat;
     border-width: 0 0 7px 0;
     border-style: solid;
+    background: url("../images/header-bckg.jpg") left no-repeat;
+    background-size: 40.9vw 100px;
 
     .menu-wrapper {
       height: 100px;
@@ -23,6 +25,7 @@ body {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
+
       color: $header-color;
       font-size: 1.125em;
       text-transform: uppercase;
@@ -30,7 +33,6 @@ body {
       .login-menu {
         padding-left: 4.1vw;
         width: 40.9vw;
-        background: url("../images/header-bckg.jpg") right top no-repeat;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -762,6 +764,7 @@ body {
     }
   }
 }
+
 @media (min-width: 751px) and (max-width: 1330px) {
   body {
     .main-content {
@@ -773,95 +776,7 @@ body {
     }
   }
 }
-@media (min-width: 751px) and (max-width: 992px) {
-  body {
-    .main-content {
-      @include section-inner-style(webim-install, header, desc, button-wrapper);
-      @include section-inner-style(easy-install, header, desc, steps-wrapper);
-      @include section-inner-style(html-install, header);
-      @include section-inner-style(dashboard-install, header, desc);
-      @include section-inner-style(after-install, header, desc, button-wrapper);
-      @include section-inner-style(other-channels, desc);
-
-      .html-install {
-        .install-list {
-          margin-left: 13.5vw;
-          height: 496px;
-        }
-      }
-
-      .dashboard-install {
-        .install-list {
-          margin-left: 13.5vw;
-          height: 568px;
-        }
-      }
-
-      .after-install {
-        .step-list {
-          margin-left: 10vw;
-        }
-      }
-
-      .other-channels {
-        .channels-list {
-          margin-left: 10vw;
-        }
-      }
-    }
-  }
-}
-@media (min-width: 751px) and (max-width: 876px) {
-  body {
-    .header {
-      .menu-wrapper {
-        font-size: 1em;
-
-        .login-menu {
-          &__item--login {
-            margin-right: 1vw;
-          }
-        }
-
-        .section-menu {
-          &__item {
-            margin-right: 1vw;
-          }
-
-          &__item--logo {
-            margin-left: 1vw;
-            margin-right: 0;
-          }
-        }
-      }
-    }
-  }
-}
-@media (min-width: 751px) and (max-width: 843px) {
-  body {
-    .main-content {
-      .other-channels {
-        .channels-list {
-          height: 447px;
-
-          &__item {
-            margin-bottom: 27px;
-          }
-        }
-      }
-    }
-  }
-}
-@media (min-width: 751px) and (max-width: 821px) {
-  body {
-    .rights-contacts {
-      .contacts-tel-wrapper {
-        margin-left: 30px;
-      }
-    }
-  }
-}
-@media (min-width: 320px) and (max-width: 750px) {
+@media (min-width: 751px) and (max-width: 1000px) {
   body {
     .header {
       background: url("../images/logo_head.svg") no-repeat center center;
@@ -975,7 +890,98 @@ body {
         }
       }
     }
+  }
+}
+@media (min-width: 751px) and (max-width: 992px) {
+  body {
+    .main-content {
+      @include section-inner-style(webim-install, header, desc, button-wrapper);
+      @include section-inner-style(easy-install, header, desc, steps-wrapper);
+      @include section-inner-style(html-install, header);
+      @include section-inner-style(dashboard-install, header, desc);
+      @include section-inner-style(after-install, header, desc, button-wrapper);
+      @include section-inner-style(other-channels, desc);
 
+      .html-install {
+        .install-list {
+          margin-left: 13.5vw;
+          height: 496px;
+        }
+      }
+
+      .dashboard-install {
+        .install-list {
+          margin-left: 13.5vw;
+          height: 568px;
+        }
+      }
+
+      .after-install {
+        .step-list {
+          margin-left: 10vw;
+        }
+      }
+
+      .other-channels {
+        .channels-list {
+          margin-left: 10vw;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 751px) and (max-width: 876px) {
+  body {
+    .header {
+      .menu-wrapper {
+        font-size: 1em;
+
+        .login-menu {
+          &__item--login {
+            margin-right: 1vw;
+          }
+        }
+
+        .section-menu {
+          &__item {
+            margin-right: 1vw;
+          }
+
+          &__item--logo {
+            margin-left: 1vw;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 751px) and (max-width: 843px) {
+  body {
+    .main-content {
+      .other-channels {
+        .channels-list {
+          height: 447px;
+
+          &__item {
+            margin-bottom: 27px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 751px) and (max-width: 821px) {
+  body {
+    .rights-contacts {
+      .contacts-tel-wrapper {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 750px) {
+  body {
     .main-content {
       .webim-install {
         @include mobile-section-flex;
