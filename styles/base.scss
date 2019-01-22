@@ -218,7 +218,6 @@ body {
     }
 
     .html-install {
-      min-width: 521px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -774,7 +773,7 @@ body {
     }
   }
 }
-@media (min-width: 751px) and (max-width: 1000px) {
+@media (min-width: 320px) and (max-width: 1000px) {
   body {
     .header {
       background: url("../images/logo_head.svg") no-repeat center center;
