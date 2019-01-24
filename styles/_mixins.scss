@@ -24,8 +24,8 @@
   text-transform: uppercase;
 }
 @mixin mobile-all-block-basis {
-  -ms-flex-preferred-size: 616px;
-  flex-basis: 616px;
+  -ms-flex-preferred-size: 82.13vw;
+  flex-basis: 82.13vw;
 }
 @mixin mobile-text-style {
   margin-left: 0;
@@ -54,7 +54,15 @@
   border-radius: 45px;
   text-transform: uppercase;
   font-size: 1.5em;
-  padding: 0;
+  padding: 0 10px;
+}
+@mixin mobile-big-numbers-style {
+  display: block;
+  margin-bottom: -83px;
+  margin-left: 0;
+  font-weight: bold;
+  font-size: 8em;
+  color: $big-numbers-color;
 }
 @mixin mobile-small-reference-style {
   padding: 0 1px;
@@ -186,7 +194,8 @@
       }
     }
   }
-  &__item:not(:last-child ){
+
+  &__item:not(:last-child) {
     margin-bottom: 3vw;
   }
 
@@ -222,6 +231,50 @@
   @each $i in $parts {
     .#{$section}__#{nth($i, 1)} {
       padding: 0 12px;
+    }
+  }
+}
+@mixin mobile-small-reference-font-size($size) {
+  body {
+    .main-content {
+      .easy-install {
+        &__steps-wrapper {
+          .registration {
+            &__small-reference {
+              &--registration {
+                font-size: $size;
+              }
+            }
+          }
+
+          .html-setup {
+            &__small-reference {
+              &--setup {
+                font-size: $size;
+              }
+            }
+          }
+        }
+      }
+
+      .other-channels {
+        .channels-list {
+          &__item {
+            &__reference {
+              font-size: $size;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin mobile-header-font-size($size, $sections...) {
+  @each $i in $sections {
+    .#{$i} {
+      &__header {
+        font-size: $size;
+      }
     }
   }
 }

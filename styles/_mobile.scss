@@ -114,7 +114,6 @@
     }
   }
 }
-
 @media (min-width: 320px) and (max-width: 750px) {
   body {
     .main-content {
@@ -184,18 +183,20 @@
 
         &__steps-wrapper {
           margin: 12.8vw 0 11.5vw;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: flex-start;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
           @include mobile-all-block-basis;
 
           .registration {
-            margin-left: 4.8vw;
             margin-right: 26.4vw;
             padding-left: 0;
-            width: 118px;
+
+            &__image {
+              margin-left: 43px;
+            }
 
             &__small-reference {
+              padding-left: 43px;
               margin-top: 3.7vw;
 
               &--registration {
@@ -205,15 +206,18 @@
           }
 
           .registration:before {
-            content: "1";
-            @include big-numbers-style;
+            @include mobile-big-numbers-style;
           }
 
           .html-setup {
             padding-left: 0;
-            width: 194px;
+
+            &__image {
+              margin-left: 43px;
+            }
 
             &__small-reference {
+              padding-left: 43px;
               margin-top: 3.7vw;
 
               &--setup {
@@ -223,8 +227,7 @@
           }
 
           .html-setup:before {
-            content: "2";
-            @include big-numbers-style;
+            @include mobile-big-numbers-style;
           }
         }
       }
@@ -242,7 +245,6 @@
         .install-list {
           margin-top: 8.7vw;
           margin-bottom: 13.4vw;
-          height: 144.5vw;
           @include mobile-full-list-style;
           @include mobile-all-block-basis;
         }
@@ -266,7 +268,6 @@
         .install-list {
           margin-top: 12vw;
           margin-bottom: 11.3vw;
-          height: 172vw;
           @include mobile-full-list-style;
           @include mobile-all-block-basis;
 
@@ -302,7 +303,6 @@
           margin-left: 0;
           margin-bottom: 0;
           padding-left: 0;
-          height: 109.6vw;
           @include mobile-all-block-basis;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -318,6 +318,7 @@
           &__item {
             &__image-block {
               width: 102px;
+              min-width: 102px;
               height: 102px;
               margin-right: 2.2vw;
 
@@ -360,7 +361,6 @@
               padding-top: 0.2em;
               font-size: 1.5em;
               color: $header-color;
-              width: 61.4vw;
 
               .mobile-step-header {
                 display: inline-block;
@@ -407,28 +407,18 @@
 
         .channels-list {
           @include mobile-all-block-basis;
-          height: 100vw;
           margin: 0 0 14.2vw;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
           -ms-flex-direction: column;
           flex-direction: column;
-          -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
-          -webkit-box-align: start;
-          -ms-flex-align: start;
-          align-items: flex-start;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
 
           &__item {
-            margin-left: 0;
-            -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-            -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
+            -ms-flex-preferred-size: auto;
+            flex-basis: auto;
 
             &__image-block {
               width: 67px;
@@ -556,6 +546,7 @@
             -webkit-box-ordinal-group: 8;
             -ms-flex-order: 7;
             order: 7;
+            margin-bottom: 0;
           }
 
           &__item--seventh {
@@ -563,29 +554,20 @@
             -ms-flex-order: 3;
             order: 3;
           }
+
+          &__item:not(:nth-child(6)) {
+            margin-bottom: 5.33vw;
+          }
         }
       }
     }
 
     .rights-contacts {
-      height: 22.1vw;
-      padding: 0 10.1vw;
+      padding: 10.52vw 10.1vw 6.67vw;
       background: $header-color;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
+      display: block;
 
       .rights-wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-
         .logo-wrapper {
           display: none;
         }
@@ -610,6 +592,107 @@
 
     .fixed-icon {
       display: none;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    .main-content {
+      .dashboard-install {
+        .install-list {
+          &__item {
+            &__desc {
+              .mobile {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 460px) {
+  body {
+    .main-content {
+      .html-install {
+        &__header {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 440px) {
+  body {
+    .main-content {
+      .easy-install {
+        &__header {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 430px) {
+  body {
+    .main-content {
+      .webim-install {
+        &__header {
+          font-size: 2.4em;
+        }
+      }
+
+      .easy-install {
+        &__header {
+          font-size: 2.4em;
+        }
+      }
+
+      .html-install {
+        &__header {
+          font-size: 2.4em;
+        }
+      }
+
+      .dashboard-install {
+        &__header {
+          font-size: 2.4em;
+        }
+      }
+
+      .after-install {
+        &__header {
+          font-size: 2.4em;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 420px) {
+  @include mobile-small-reference-font-size(1.2em);
+}
+@media (min-width: 320px) and (max-width: 360px) {
+  @include mobile-small-reference-font-size(1em);
+
+  body {
+    .main-content {
+      .after-install {
+        .step-list {
+          &__item {
+            &__desc {
+              font-size: 1.25em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 340px) {
+  body {
+    .main-content {
+      @include mobile-header-font-size(2.2em,webim-install, easy-install, html-install, dashboard-install, after-install);
     }
   }
 }
