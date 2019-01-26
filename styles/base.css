@@ -36,6 +36,11 @@ ul {
   list-style: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Ubuntu';
   src: url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic,cyrillic-ext");
