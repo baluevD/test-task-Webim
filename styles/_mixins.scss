@@ -98,7 +98,8 @@
     &__reference {
       @include mobile-list-reference-style;
       margin-left: 22px;
-
+      @include a-hover-active-style;
+      
       .mobile {
         display: block;
       }
@@ -178,7 +179,7 @@
     &__reference {
       @include list-reference-style;
       margin-left: -1px;
-
+      @include a-hover-active-style;
       .mobile {
         display: none;
       }
@@ -219,6 +220,16 @@
   justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+@mixin a-hover-active-style {
+  &:hover {
+    color: lighten($reference-color, 20%);
+    border-color: lighten($reference-color, 20%);
+  }
+  &:active {
+    color: darken($reference-color, 20%);
+    border-color: darken($reference-color, 20%);
+  }
 }
 @mixin section-inner-style($section, $parts...) {
   @each $i in $parts {

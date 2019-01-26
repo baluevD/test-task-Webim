@@ -197,6 +197,14 @@ body .main-content .webim-install__button-wrapper .button--try-free {
   padding: 16px 20px;
 }
 
+body .main-content .webim-install__button-wrapper .button--try-free:hover {
+  background-color: #80e5d4;
+}
+
+body .main-content .webim-install__button-wrapper .button--try-free:active {
+  background-color: #1a7f6e;
+}
+
 body .main-content .webim-install__button-wrapper .button--rate {
   margin: 0 10px 2vw;
   color: #393e6b;
@@ -207,6 +215,17 @@ body .main-content .webim-install__button-wrapper .button--rate {
   text-transform: uppercase;
   font-size: 0.9em;
   padding: 16px 20px;
+}
+
+body .main-content .webim-install__button-wrapper .button--rate:hover {
+  color: #6067aa;
+  border-color: #6067aa;
+}
+
+body .main-content .webim-install__button-wrapper .button--rate:active {
+  color: #fff;
+  background-color: #393e6b;
+  border: 0;
 }
 
 body .main-content .easy-install {
@@ -271,6 +290,16 @@ body .main-content .easy-install__steps-wrapper .registration__small-reference--
   border-bottom: 2px solid #0da088;
 }
 
+body .main-content .easy-install__steps-wrapper .registration__small-reference--registration:hover {
+  color: #26edcd;
+  border-color: #26edcd;
+}
+
+body .main-content .easy-install__steps-wrapper .registration__small-reference--registration:active {
+  color: #054238;
+  border-color: #054238;
+}
+
 body .main-content .easy-install__steps-wrapper .registration:before {
   content: "1";
   display: block;
@@ -296,6 +325,16 @@ body .main-content .easy-install__steps-wrapper .html-setup__small-reference--se
   font-size: 1.125em;
   text-decoration: none;
   border-bottom: 2px solid #0da088;
+}
+
+body .main-content .easy-install__steps-wrapper .html-setup__small-reference--setup:hover {
+  color: #26edcd;
+  border-color: #26edcd;
+}
+
+body .main-content .easy-install__steps-wrapper .html-setup__small-reference--setup:active {
+  color: #054238;
+  border-color: #054238;
 }
 
 body .main-content .easy-install__steps-wrapper .html-setup:before {
@@ -357,6 +396,16 @@ body .main-content .html-install .install-list__item__reference {
   text-decoration: none;
   border-bottom: 2px solid #0da088;
   margin-left: -1px;
+}
+
+body .main-content .html-install .install-list__item__reference:hover {
+  color: #26edcd;
+  border-color: #26edcd;
+}
+
+body .main-content .html-install .install-list__item__reference:active {
+  color: #054238;
+  border-color: #054238;
 }
 
 body .main-content .html-install .install-list__item__reference .mobile {
@@ -442,6 +491,16 @@ body .main-content .dashboard-install .install-list__item__reference {
   text-decoration: none;
   border-bottom: 2px solid #0da088;
   margin-left: -1px;
+}
+
+body .main-content .dashboard-install .install-list__item__reference:hover {
+  color: #26edcd;
+  border-color: #26edcd;
+}
+
+body .main-content .dashboard-install .install-list__item__reference:active {
+  color: #054238;
+  border-color: #054238;
 }
 
 body .main-content .dashboard-install .install-list__item__reference .mobile {
@@ -640,6 +699,14 @@ body .main-content .after-install__button-wrapper .button--all-features {
   padding: 16px 20px;
 }
 
+body .main-content .after-install__button-wrapper .button--all-features:hover {
+  background-color: #80e5d4;
+}
+
+body .main-content .after-install__button-wrapper .button--all-features:active {
+  background-color: #1a7f6e;
+}
+
 body .main-content .after-install__button-wrapper .button--test-free {
   margin: 0 10px 2vw;
   color: #fff;
@@ -650,6 +717,14 @@ body .main-content .after-install__button-wrapper .button--test-free {
   text-transform: uppercase;
   font-size: 0.9em;
   padding: 16px 20px;
+}
+
+body .main-content .after-install__button-wrapper .button--test-free:hover {
+  background-color: #6067aa;
+}
+
+body .main-content .after-install__button-wrapper .button--test-free:active {
+  background-color: #161728;
 }
 
 body .main-content .other-channels {
@@ -773,6 +848,16 @@ body .main-content .other-channels .channels-list__item__reference {
   border-bottom: 2px solid #0da088;
 }
 
+body .main-content .other-channels .channels-list__item__reference:hover {
+  color: #26edcd;
+  border-color: #26edcd;
+}
+
+body .main-content .other-channels .channels-list__item__reference:active {
+  color: #054238;
+  border-color: #054238;
+}
+
 body .main-content .other-channels .channels-list__item__reference--mobile-chat {
   border: 0;
 }
@@ -783,6 +868,16 @@ body .main-content .other-channels .channels-list__item__reference--mobile-chat-
 
 body .main-content .other-channels .channels-list__item__reference--mobile-chat--second-line {
   border-bottom: 2px solid #0da088;
+}
+
+body .main-content .other-channels .channels-list__item:hover span {
+  color: #26edcd;
+  border-color: #26edcd;
+}
+
+body .main-content .other-channels .channels-list__item:active span {
+  color: #054238;
+  border-color: #054238;
 }
 
 body .main-content .other-channels .channels-list__item:not(:last-child) {
@@ -1293,6 +1388,14 @@ body .fixed-icon .icon-wrapper .icon {
     border-bottom: 2px solid #0da088;
     margin-left: 22px;
   }
+  body .main-content .html-install .install-list__item__reference:hover {
+    color: #26edcd;
+    border-color: #26edcd;
+  }
+  body .main-content .html-install .install-list__item__reference:active {
+    color: #054238;
+    border-color: #054238;
+  }
   body .main-content .html-install .install-list__item__reference .mobile {
     display: block;
   }
@@ -1373,6 +1476,14 @@ body .fixed-icon .icon-wrapper .icon {
     text-decoration: none;
     border-bottom: 2px solid #0da088;
     margin-left: 22px;
+  }
+  body .main-content .dashboard-install .install-list__item__reference:hover {
+    color: #26edcd;
+    border-color: #26edcd;
+  }
+  body .main-content .dashboard-install .install-list__item__reference:active {
+    color: #054238;
+    border-color: #054238;
   }
   body .main-content .dashboard-install .install-list__item__reference .mobile {
     display: block;

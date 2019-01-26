@@ -133,6 +133,14 @@ body {
           color: #fff;
           background: $button-green-color;
           @include button-style;
+
+          &:hover {
+            background-color: lighten($button-green-color, 20%);
+          }
+
+          &:active {
+            background-color: darken($button-green-color, 20%);
+          }
         }
 
         .button--rate {
@@ -140,6 +148,17 @@ body {
           color: $header-color;
           border: 1px solid $header-color;
           @include button-style;
+
+          &:hover {
+            color: lighten($header-color, 20%);
+            border-color: lighten($header-color, 20%);
+          }
+
+          &:active {
+            color: #fff;
+            background-color: $header-color;
+            border: 0;
+          }
         }
       }
     }
@@ -188,6 +207,7 @@ body {
 
             &--registration {
               @include small-reference-style;
+              @include a-hover-active-style;
             }
           }
         }
@@ -206,6 +226,7 @@ body {
 
             &--setup {
               @include small-reference-style;
+              @include a-hover-active-style;
             }
           }
         }
@@ -422,6 +443,14 @@ body {
           color: #fff;
           background: $button-green-color;
           @include button-style;
+
+          &:hover {
+            background-color: lighten($button-green-color, 20%);
+          }
+
+          &:active {
+            background-color: darken($button-green-color, 20%);
+          }
         }
 
         .button--test-free {
@@ -429,6 +458,14 @@ body {
           color: #fff;
           background: $header-color;
           @include button-style;
+
+          &:hover {
+            background-color: lighten($header-color, 20%);
+          }
+
+          &:active {
+            background-color: darken($header-color, 20%);
+          }
         }
       }
     }
@@ -555,6 +592,7 @@ body {
             height: 21px;
             margin-left: calc(1.7vw - 1px);
             @include small-reference-style;
+            @include a-hover-active-style;
           }
 
           &__reference--mobile-chat {
@@ -566,6 +604,19 @@ body {
 
             &--second-line {
               border-bottom: 2px solid $reference-color;
+            }
+          }
+
+          &:hover {
+            span {
+              color: lighten($reference-color, 20%);
+              border-color: lighten($reference-color, 20%);
+            }
+          }
+          &:active {
+            span {
+              color: darken($reference-color, 20%);
+              border-color: darken($reference-color, 20%);
             }
           }
         }
