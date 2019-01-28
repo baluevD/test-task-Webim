@@ -150,13 +150,14 @@ body {
           @include button-style;
 
           &:hover {
-            color: lighten($header-color, 20%);
-            border-color: lighten($header-color, 20%);
+            color: #fff;
+            background: $header-color;
+            border: 0;
           }
 
           &:active {
             color: #fff;
-            background-color: $header-color;
+            background: darken($header-color, 20%);
             border: 0;
           }
         }

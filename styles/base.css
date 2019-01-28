@@ -223,13 +223,14 @@ body .main-content .webim-install__button-wrapper .button--rate {
 }
 
 body .main-content .webim-install__button-wrapper .button--rate:hover {
-  color: #6067aa;
-  border-color: #6067aa;
+  color: #fff;
+  background: #393e6b;
+  border: 0;
 }
 
 body .main-content .webim-install__button-wrapper .button--rate:active {
   color: #fff;
-  background-color: #393e6b;
+  background: #161728;
   border: 0;
 }
 
