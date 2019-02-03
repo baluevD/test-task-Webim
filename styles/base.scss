@@ -1,4 +1,4 @@
-@import 'reset','variables', 'mixins';
+@import 'variables', 'mixins', 'reset';
 @font-face {
   font-family: 'Ubuntu';
   src: url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic,cyrillic-ext");
@@ -814,4 +814,5 @@ body {
     }
   }
 }
+
 @import 'mobile';
